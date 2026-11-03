@@ -1,0 +1,1091 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Gaurav Jain Month 1</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap">
+<style>
+/* Layout: one full-viewport slide at a time, alternating navy and paper grounds; presenter bar on top, progress + timer below. Single committed look. */
+:root{
+  --navy:#071426; --blue:#12304B; --blue-2:#1B3D5E; --paper:#F7F8FA; --paper-2:#ECEFF3;
+  --gold:#C9A36B; --gold-d:#9C7A45; --grey:#AAB6C3; --ink:#0B1A2E; --ink-2:#4A5A6E;
+  --ok:#3E9B74; --rev:#D08A3A; --hold:#7E8FC4; --pend:#8C99A8; --conf-bg:#FFF1DC; --conf-fg:#8A4B0B;
+  --f-head:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --bar:52px; --foot:46px;
+  color-scheme:dark;
+}
+html,body{height:100%}
+body{background:var(--navy);color:var(--paper);font-family:var(--f-body);font-size:16px;line-height:1.55;overflow:hidden;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--navy)}
+button{font:inherit;color:inherit;cursor:pointer;background:none;border:0}
+button:focus-visible,a:focus-visible,textarea:focus-visible,input:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+h1,h2,h3,h4{font-family:var(--f-head);margin:0;text-wrap:balance;letter-spacing:-.02em}
+p{margin:0}
+.eyebrow{font-family:var(--f-head);font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.serif{font-family:var(--f-serif)}
+.topbar{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;height:var(--bar);z-index:40;display:flex;align-items:center;gap:12px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  background:rgba(7,20,38,.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(170,182,195,.14)}
+.brandmark{font-family:var(--f-head);font-weight:800;font-size:13px;letter-spacing:.08em;white-space:nowrap}
+.brandmark span{color:var(--gold)}
+.crumb{color:var(--grey);font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;flex:1}
+.tb-btn{height:34px;padding:0 12px;border-radius:8px;border:1px solid rgba(170,182,195,.25);font-size:13px;font-weight:500;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.tb-btn:hover{border-color:var(--gold);color:var(--gold)}
+.tb-btn svg{width:16px;height:16px}
+.stage{position:fixed;top:calc(env(safe-area-inset-top,0px) + var(--bar));bottom:calc(env(safe-area-inset-bottom,0px) + var(--foot));left:0;right:0}
+.slide{position:absolute;inset:0;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch}
+.slide.dark{background:var(--navy);color:var(--paper)}
+.slide.light{background:var(--paper);color:var(--ink);color-scheme:light}
+.slide.light .eyebrow{color:var(--gold-d)}
+.slide.enter{animation:enter .55s cubic-bezier(.2,.7,.2,1)}
+@keyframes enter{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.wrap{max-width:1180px;margin:0 auto;min-height:100%;display:flex;flex-direction:column;justify-content:center;gap:28px;
+  padding-block:clamp(28px,5vh,64px);padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.h-xl{font-size:clamp(36px,5.6vw,76px);font-weight:800;line-height:1.02}
+.h-l{font-size:clamp(28px,3.8vw,50px);font-weight:800;line-height:1.08}
+.lede{font-size:clamp(17px,1.6vw,21px);line-height:1.5;max-width:62ch;color:var(--grey)}
+.light .lede{color:var(--ink-2)}
+.muted{color:var(--grey)} .light .muted{color:var(--ink-2)}
+.rule{height:1px;background:rgba(170,182,195,.2);border:0;margin:0}
+.foot{position:fixed;bottom:0;left:0;right:0;height:calc(var(--foot) + env(safe-area-inset-bottom,0px));padding-bottom:env(safe-area-inset-bottom,0px);z-index:40;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:flex;align-items:center;gap:14px;background:rgba(7,20,38,.94);border-top:1px solid rgba(170,182,195,.14)}
+.progress{flex:1;display:flex;gap:4px;min-width:0}
+.progress button{flex:1;height:18px;position:relative}
+.progress button::after{content:"";position:absolute;left:0;right:0;top:8px;height:3px;border-radius:2px;background:rgba(170,182,195,.25)}
+.progress button.done::after{background:rgba(201,163,107,.55)}
+.progress button.on::after{background:var(--gold)}
+.navbtn{width:34px;height:34px;border-radius:50%;border:1px solid rgba(170,182,195,.3);display:grid;place-items:center;flex:none}
+.navbtn:hover{border-color:var(--gold);color:var(--gold)}
+.navbtn svg{width:16px;height:16px}
+.count{font-size:12px;color:var(--grey);font-variant-numeric:tabular-nums;white-space:nowrap}
+.timer{font-size:12px;color:var(--grey);font-variant-numeric:tabular-nums;white-space:nowrap;display:flex;align-items:center;gap:8px}
+.timer b{font-weight:600;color:var(--paper)}
+.timer.late b{color:var(--rev)}
+.timer button{font-size:11px;text-decoration:underline;color:var(--grey)}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,5vw,72px);align-items:center}
+.hero .h-xl{letter-spacing:-.035em}
+.hero .sub{font-family:var(--f-serif);font-style:italic;font-size:clamp(22px,2.4vw,32px);color:var(--gold);margin-top:10px}
+.hero .meta{display:flex;flex-direction:column;gap:6px;margin-top:28px;font-size:15px;color:var(--grey)}
+.portrait{aspect-ratio:4/5;max-width:100%;border:1px solid rgba(201,163,107,.45);border-radius:4px;position:relative;overflow:hidden;background:var(--blue)}
+.portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.btn{display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 24px;border-radius:999px;font-family:var(--f-head);font-weight:700;font-size:15px;letter-spacing:.02em}
+.btn-gold{background:var(--gold);color:var(--navy)}
+.btn-gold:hover{background:#d8b47e}
+.btn-ghost{border:1px solid currentColor}
+.btn-sm{height:38px;padding:0 16px;font-size:13px}
+.btn svg{width:18px;height:18px}
+.btn-ink{background:var(--navy);color:var(--paper)}
+.btn-outline{border:1px solid rgba(11,26,46,.3);color:var(--ink)}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(170,182,195,.18);border:1px solid rgba(170,182,195,.18)}
+.trio > div{background:var(--navy);padding:26px 24px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.trio .n{font-family:var(--f-serif);font-size:40px;color:var(--gold);line-height:1}
+.trio h3{font-size:19px}
+.summary{display:grid;grid-template-columns:200px 1fr;gap:24px;align-items:start}
+.summary ul{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px 32px}
+.summary li{padding-left:16px;position:relative;font-size:15px;color:var(--grey)}
+.summary li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:1px;background:var(--gold)}
+.traits{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.trait{text-align:left;border:1px solid rgba(11,26,46,.14);border-radius:6px;padding:18px 16px;background:#fff;display:flex;flex-direction:column;gap:12px;min-height:170px;color:var(--ink)}
+.trait:hover{border-color:var(--gold-d)}
+.trait.on{border-color:var(--navy);background:var(--navy);color:var(--paper)}
+.trait .k{font-family:var(--f-head);font-size:12px;font-weight:700;color:var(--gold-d);letter-spacing:.1em}
+.trait.on .k{color:var(--gold)}
+.trait h3{font-size:17px;line-height:1.3;font-weight:700}
+.trait .more{margin-top:auto;font-size:12px;color:var(--ink-2)}
+.trait.on .more{color:var(--grey)}
+.evidence{border-left:2px solid var(--gold);padding:6px 0 6px 22px;display:grid;grid-template-columns:1fr 1fr;gap:28px;min-height:150px}
+.evidence .quote{font-family:var(--f-serif);font-size:clamp(20px,2vw,26px);line-height:1.35;font-style:italic;color:var(--ink)}
+.evidence .story{font-size:15.5px;color:var(--ink-2);display:flex;flex-direction:column;gap:10px}
+.evidence .src{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-d);font-weight:600}
+.aud{display:grid;grid-template-columns:320px 1fr;gap:28px;align-items:start}
+.aud-list{display:flex;flex-direction:column;gap:8px}
+.aud-btn{display:grid;grid-template-columns:42px 1fr;gap:12px;align-items:center;text-align:left;padding:14px 16px;border-radius:6px;border:1px solid rgba(170,182,195,.2)}
+.aud-btn .p{font-family:var(--f-serif);font-size:28px;color:var(--grey);line-height:1}
+.aud-btn .t{font-family:var(--f-head);font-weight:700;font-size:15px;line-height:1.25}
+.aud-btn .s{font-size:12px;color:var(--grey)}
+.aud-btn.on{background:var(--blue);border-color:var(--gold)}
+.aud-btn.on .p{color:var(--gold)}
+.aud-panel{background:var(--blue);border-radius:6px;padding:28px;display:grid;grid-template-columns:1fr 1fr;gap:24px 32px;min-width:0}
+.aud-panel h3{grid-column:1/-1;font-size:24px}
+.q span{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700;font-family:var(--f-head);margin-bottom:6px}
+.q p{font-size:15.5px;color:#DCE3EB}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{font-size:12px;padding:5px 11px;border-radius:999px;border:1px solid rgba(170,182,195,.3);color:var(--grey)}
+.rep{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(11,26,46,.15)}
+.rep > div{padding:28px 22px 8px;display:flex;flex-direction:column;gap:14px;border-right:1px solid rgba(11,26,46,.1);min-width:0}
+.rep > div:first-child{padding-left:0}
+.rep > div:last-child{border-right:0}
+.rep .big{font-family:var(--f-head);font-weight:800;font-size:clamp(24px,2.5vw,34px);line-height:1.02;letter-spacing:-.03em}
+.rep .big em{font-style:normal;color:var(--gold-d)}
+.rep p{font-family:var(--f-serif);font-size:19px;line-height:1.4;color:var(--ink)}
+.rep small{font-size:13px;color:var(--ink-2)}
+.pull{font-family:var(--f-serif);font-size:clamp(22px,2.6vw,34px);line-height:1.3;max-width:36ch}
+.pull em{color:var(--gold-d)}
+.dark .pull em{color:var(--gold)}
+.li-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:24px;align-items:start}
+.li{background:#fff;color:#1d2226;border-radius:10px;overflow:hidden;border:1px solid rgba(11,26,46,.12);min-width:0}
+.li-banner{height:120px;background:var(--navy);position:relative;display:flex;align-items:center;justify-content:flex-end;padding:0 28px}
+.li-banner::before{content:"";position:absolute;left:0;top:0;bottom:0;width:38%;background:linear-gradient(90deg,var(--blue),transparent)}
+.li-banner .bt{font-family:var(--f-head);font-weight:700;color:var(--paper);font-size:clamp(14px,1.6vw,19px);text-align:right;line-height:1.3;position:relative}
+.li-banner .bt span{color:var(--gold);font-size:.72em;font-weight:600}
+.li-body{padding:0 24px 22px}
+.li-av{width:104px;height:104px;border-radius:50%;border:4px solid #fff;background:var(--blue);margin-top:-52px;overflow:hidden;position:relative}
+.li-av img{width:100%;height:100%;object-fit:cover}
+.li-name{font-size:22px;font-weight:600;margin-top:10px}
+.li-head{font-size:15px;line-height:1.45;margin-top:4px}
+.li-loc{font-size:13px;color:#666;margin-top:6px}
+.li-sec{border-top:1px solid #e7e7e7;padding:16px 24px}
+.li-sec h4{font-family:var(--f-body);font-size:16px;font-weight:600;margin-bottom:8px}
+.li-about{font-size:14px;line-height:1.55;white-space:pre-line}
+.li-about.clamp{display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.side-card{border:1px solid rgba(11,26,46,.12);border-radius:8px;padding:18px;display:flex;flex-direction:column;gap:12px;background:#fff}
+.side-card h4{font-size:15px}
+.side-card ul{margin:0;padding-left:18px;font-size:14px;color:var(--ink-2);display:flex;flex-direction:column;gap:6px}
+.ctrl-row{display:flex;gap:10px;flex-wrap:wrap}
+.alt-list{display:flex;flex-direction:column;gap:10px}
+.alt{border:1px solid rgba(11,26,46,.14);border-radius:8px;padding:14px 16px;text-align:left;display:flex;flex-direction:column;gap:4px;background:#fff;color:var(--ink)}
+.alt.on{border-color:var(--gold-d);box-shadow:inset 3px 0 0 var(--gold)}
+.alt .l{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-d);font-weight:700}
+.alt .v{font-size:14.5px;line-height:1.45}
+.stamp{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;padding:5px 10px;border-radius:999px;background:rgba(11,26,46,.06)}
+.pillars{display:grid;grid-template-columns:42fr 25fr 17fr 17fr;gap:8px;min-height:230px}
+.pillar{text-align:left;border-radius:6px;padding:20px 18px;display:flex;flex-direction:column;gap:10px;background:var(--blue);border:1px solid transparent;min-width:0}
+.pillar:hover{border-color:rgba(201,163,107,.5)}
+.pillar.on{border-color:var(--gold);background:var(--blue-2)}
+.pillar .pc{font-family:var(--f-serif);font-size:clamp(34px,4vw,56px);line-height:1;color:var(--gold)}
+.pillar h3{font-size:clamp(13px,1.15vw,16px);letter-spacing:.04em;text-transform:uppercase;line-height:1.25}
+.pillar p{font-size:13.5px;color:var(--grey)}
+.pillar .cnt{margin-top:auto;font-size:12px;color:var(--grey)}
+.pdetail{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;border-top:1px solid rgba(170,182,195,.2);padding-top:22px}
+.arc{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+.arc .st{padding:22px 20px 18px;border-top:3px solid var(--navy);display:flex;flex-direction:column;gap:10px;position:relative}
+.arc .st:nth-child(1){border-color:var(--gold)}
+.arc .st .n{font-family:var(--f-head);font-weight:800;font-size:13px;color:var(--gold-d);letter-spacing:.08em}
+.arc .st h3{font-size:22px}
+.arc .st p{font-size:14.5px;color:var(--ink-2)}
+.arc .st .posts{font-size:12.5px;color:var(--ink);font-weight:600}
+.cal{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.week{display:flex;flex-direction:column;gap:10px;min-width:0}
+.week-h{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(170,182,195,.2);padding-bottom:8px}
+.week-h b{font-family:var(--f-head);font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+.week-h span{font-size:12px;color:var(--grey)}
+.pcard{text-align:left;background:var(--blue);border-radius:6px;overflow:hidden;display:grid;grid-template-columns:72px 1fr;border:1px solid transparent}
+.pcard:hover{border-color:var(--gold)}
+.pcard img,.pcard .np{width:72px;height:100%;min-height:96px;object-fit:cover;display:block;background:var(--blue-2)}
+.pcard .np{display:grid;place-items:center;font-size:10px;color:var(--grey);text-align:center}
+.pcard .bd{padding:10px 12px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.pcard .top{display:flex;justify-content:space-between;align-items:center;gap:6px}
+.pcard .num{font-family:var(--f-serif);font-size:20px;color:var(--gold);line-height:1}
+.pcard h4{font-family:var(--f-head);font-size:13.5px;line-height:1.3;font-weight:700}
+.pcard .tk{font-size:11.5px;color:var(--grey)}
+.ptag{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:999px;white-space:nowrap}
+.ptag.K{background:rgba(201,163,107,.2);color:var(--gold)}
+.ptag.I{background:rgba(62,155,116,.2);color:#8CD3B2}
+.ptag.L{background:rgba(126,143,196,.22);color:#B3C0EA}
+.ptag.E{background:rgba(208,138,58,.2);color:#F0B77A}
+.light .ptag.K{color:#7A5A28} .light .ptag.I{color:#22694C} .light .ptag.L{color:#3E4E86} .light .ptag.E{color:#8A4B0B}
+.dot{width:8px;height:8px;border-radius:50%;flex:none;display:inline-block}
+.st-approved{background:var(--ok)} .st-revision{background:var(--rev)} .st-hold{background:var(--hold)} .st-pending{background:var(--pend)}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12.5px;color:var(--grey)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.cmp > div{border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.cmp .gen{background:var(--paper-2);color:var(--ink-2)}
+.cmp .real{background:#fff;border:1px solid rgba(11,26,46,.14);color:var(--ink)}
+.cmp .txt{font-size:16px;line-height:1.6}
+.cmp .lbl{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;font-family:var(--f-head)}
+.cmp .real .lbl{color:var(--gold-d)}
+.cmp .note{font-size:13px;border-top:1px solid rgba(11,26,46,.1);padding-top:12px}
+.lines{display:flex;flex-wrap:wrap;gap:8px}
+.lines span{font-family:var(--f-serif);font-style:italic;font-size:16px;background:#fff;border:1px solid rgba(11,26,46,.12);border-radius:999px;padding:6px 14px;color:var(--ink)}
+.studio-wrap{height:100%;display:flex;flex-direction:column;padding-block:14px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));gap:12px;max-width:1500px;margin:0 auto}
+.studio-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.studio-head h2{font-size:clamp(19px,1.9vw,25px)}
+.tally{display:flex;gap:14px;font-size:12.5px;color:var(--ink-2);flex-wrap:wrap}
+.tally span{display:inline-flex;align-items:center;gap:6px}
+.studio{flex:1;min-height:0;display:grid;grid-template-columns:250px minmax(0,1fr) 330px;gap:14px}
+.s-col{min-height:0;overflow-y:auto;border-radius:8px}
+.s-list{background:#fff;border:1px solid rgba(11,26,46,.1);padding:6px}
+.s-item{width:100%;text-align:left;display:grid;grid-template-columns:40px 1fr 10px;gap:8px;align-items:center;padding:7px 8px;border-radius:6px;color:var(--ink)}
+.s-item:hover{background:var(--paper)}
+.s-item.on{background:var(--navy);color:var(--paper)}
+.s-item img,.s-item .np{width:40px;height:40px;border-radius:5px;object-fit:cover;display:block;background:var(--paper-2)}
+.s-item .np{display:grid;place-items:center;font-size:9px;color:var(--ink-2)}
+.s-item .t{font-size:13px;font-weight:600;line-height:1.25}
+.s-item .w{font-size:11px;color:var(--ink-2);font-weight:400;display:block;margin-top:2px}
+.s-item.on .w{color:var(--grey)}
+.s-main{background:var(--paper-2);padding:18px}
+.post{background:#fff;color:#1d2226;border-radius:10px;border:1px solid rgba(11,26,46,.1);max-width:620px;margin:0 auto;overflow:hidden}
+.post-h{display:flex;gap:12px;padding:16px 18px 10px;align-items:center}
+.post-h img{width:48px;height:48px;border-radius:50%;object-fit:cover;flex:none}
+.post-h .nm{font-weight:600;font-size:15px}
+.post-h .hl{font-size:12px;color:#666;line-height:1.35}
+.pend-flag{margin-left:auto;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border-radius:999px;background:rgba(140,153,168,.15);color:#56626F;white-space:nowrap}
+.post-body{padding:4px 18px 12px;font-size:15.5px;line-height:1.62}
+.post-body p{margin:0 0 .85em}
+.post-body.clamp{max-height:17em;overflow:hidden;position:relative}
+.post-body.clamp::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3em;background:linear-gradient(transparent,#fff)}
+.hookline{font-size:16.5px;font-weight:600;line-height:1.5;padding:4px 18px 10px;position:relative}
+.hookline .hl-tag{display:inline-block;font-family:var(--f-head);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#9C7A45;background:#F6EEDF;border-radius:4px;padding:2px 7px;margin-bottom:6px}
+.brief{max-width:620px;margin:0 auto 14px;background:#fff;border:1px solid rgba(11,26,46,.1);border-radius:10px;padding:16px 18px;display:flex;flex-direction:column;gap:12px;color:var(--ink)}
+.brief-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.brief-grid div span{display:block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--gold-d);font-family:var(--f-head);margin-bottom:2px}
+.brief-grid div b{font-size:13.5px;font-weight:600;line-height:1.3;display:block}
+.brief .idea span{display:block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--gold-d);font-family:var(--f-head);margin-bottom:2px}
+.brief .idea p{font-size:14.5px;line-height:1.5}
+.brief-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:640px){.brief-grid{grid-template-columns:1fr 1fr}.brief-row{grid-template-columns:1fr}}
+.vtabs{max-width:620px;margin:0 auto 10px;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.vtab{border:1px solid rgba(11,26,46,.15);border-radius:8px;padding:10px 12px;text-align:left;background:#fff;color:var(--ink);display:flex;flex-direction:column;gap:2px}
+.vtab b{font-family:var(--f-head);font-size:13.5px}
+.vtab small{font-size:12px;color:var(--ink-2)}
+.vtab.on{border-color:var(--navy);box-shadow:inset 0 0 0 1px var(--navy);background:#F3F6FA}
+.vtab .rec{color:var(--gold-d);font-weight:700}
+.conf{background:var(--conf-bg);color:var(--conf-fg);border-radius:4px;padding:1px 6px;font-weight:600;font-size:.92em;white-space:normal}
+.post-x{display:flex;gap:16px;padding:0 18px 12px;font-size:13px}
+.post-x button{color:#0a66c2;font-weight:600}
+.post-img{display:block;width:100%;max-width:100%;background:#F0F2F5}
+.post-noimg{margin:0 18px 18px;padding:28px;border:1px dashed #b8c2cc;border-radius:6px;text-align:center;font-size:13px;color:#56626F;background:#F4F6F8}
+.s-meta{background:#fff;border:1px solid rgba(11,26,46,.1);padding:16px;display:flex;flex-direction:column;gap:14px;color:var(--ink)}
+.m-sec span.k{display:block;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--gold-d);font-family:var(--f-head);margin-bottom:4px}
+.m-sec p{font-size:13.5px;line-height:1.5}
+.m-sec ol,.m-sec ul{margin:0;padding-left:18px;font-size:13.5px;display:flex;flex-direction:column;gap:6px}
+.confirm-box{background:var(--conf-bg);border-left:3px solid var(--rev);padding:10px 12px;border-radius:0 6px 6px 0}
+.confirm-box span.k{color:var(--conf-fg)}
+.st-row{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.st-btn{height:36px;border-radius:6px;border:1px solid rgba(11,26,46,.18);font-size:12.5px;font-weight:600;display:inline-flex;align-items:center;justify-content:center;gap:6px;color:var(--ink);background:#fff}
+.st-btn:hover{border-color:var(--ink)}
+.st-btn.on.approved{background:var(--ok);border-color:var(--ok);color:#fff}
+.st-btn.on.revision{background:var(--rev);border-color:var(--rev);color:#fff}
+.st-btn.on.hold{background:var(--hold);border-color:var(--hold);color:#fff}
+.st-btn.on.pending{background:var(--pend);border-color:var(--pend);color:#fff}
+textarea{width:100%;min-height:84px;resize:vertical;border:1px solid rgba(11,26,46,.2);border-radius:6px;padding:10px;font:inherit;font-size:14px;color:var(--ink);background:#fff}
+.saved{font-size:11.5px;color:var(--ink-2);min-height:1em}
+.s-nav{display:flex;gap:8px;flex-wrap:wrap;justify-content:space-between}
+.overlay{position:fixed;inset:0;z-index:80;background:rgba(7,20,38,.96);overflow-y:auto;padding-block:calc(env(safe-area-inset-top,0px) + 24px) calc(env(safe-area-inset-bottom,0px) + 40px);padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.reader{max-width:700px;margin:0 auto;background:var(--paper);color:var(--ink);border-radius:10px;padding:clamp(24px,5vw,56px);color-scheme:light}
+.reader .rh{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;margin-bottom:22px}
+.reader h3{font-size:clamp(22px,2.6vw,30px)}
+.reader .rbody{font-size:clamp(17px,1.5vw,20px);line-height:1.7}
+.reader .rbody p{margin:0 0 1em}
+.reader img{width:100%;border-radius:6px;margin:6px 0 18px}
+.closex{width:40px;height:40px;border-radius:50%;border:1px solid rgba(11,26,46,.2);display:grid;place-items:center;flex:none;color:var(--ink)}
+.closex svg{width:18px;height:18px}
+.modal{max-width:760px;margin:0 auto;background:var(--paper);color:var(--ink);border-radius:10px;padding:clamp(20px,4vw,40px);display:flex;flex-direction:column;gap:16px;color-scheme:light}
+.modal textarea{min-height:320px;font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:12.5px;line-height:1.5}
+.appr{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:start}
+.cat{display:grid;grid-template-columns:28px 1fr auto;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid rgba(170,182,195,.18)}
+.cat .n{font-family:var(--f-serif);font-size:22px;color:var(--gold)}
+.cat h4{font-size:16px}
+.cat small{display:block;font-size:12.5px;color:var(--grey);margin-top:2px}
+.seg{display:flex;border:1px solid rgba(170,182,195,.3);border-radius:8px;overflow:hidden}
+.seg button{padding:7px 10px;font-size:12px;font-weight:600;color:var(--grey);border-right:1px solid rgba(170,182,195,.2);white-space:nowrap}
+.seg button:last-child{border-right:0}
+.seg button.on.approved{background:var(--ok);color:#fff}
+.seg button.on.revision{background:var(--rev);color:#fff}
+.seg button.on.hold{background:var(--hold);color:#fff}
+.seg button.on.pending{background:var(--pend);color:#fff}
+.steps{display:flex;flex-direction:column;gap:2px}
+.step{display:grid;grid-template-columns:22px 1fr;gap:12px;align-items:start;padding:10px 0;font-size:14.5px;border-bottom:1px solid rgba(170,182,195,.14);cursor:pointer}
+.step input{width:18px;height:18px;accent-color:var(--gold);margin:2px 0 0}
+.step.done span{color:var(--grey);text-decoration:line-through}
+.closing{font-family:var(--f-serif);font-size:clamp(24px,2.8vw,38px);line-height:1.25}
+.closing em{color:var(--gold);font-style:italic}
+.toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + var(--foot) + 16px);transform:translateX(-50%);background:var(--gold);color:var(--navy);font-weight:600;font-size:13.5px;padding:10px 18px;border-radius:999px;z-index:90}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+@media (max-width:1100px){
+  .studio{grid-template-columns:200px minmax(0,1fr)} .s-meta{grid-column:1/-1}
+  .traits{grid-template-columns:repeat(3,1fr)} .cal{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:820px){
+  body{overflow:auto}
+  .hero,.aud,.li-grid,.appr,.summary,.cmp,.evidence{grid-template-columns:1fr}
+  .hero .portrait{max-width:320px}
+  .trio,.rep,.pdetail,.arc{grid-template-columns:1fr 1fr}
+  .rep > div{padding-left:0;border-right:0;border-bottom:1px solid rgba(11,26,46,.1);padding-bottom:18px}
+  .summary ul{grid-template-columns:1fr}
+  .pillars{grid-template-columns:1fr 1fr}
+  .aud-panel{grid-template-columns:1fr}
+  .studio-wrap{height:auto} .studio{grid-template-columns:1fr} .s-col{overflow:visible}
+  .s-list{display:flex;overflow-x:auto;gap:4px} .s-item{min-width:190px}
+  .crumb,.count{display:none}
+}
+@media (max-width:520px){
+  .trio,.rep,.pdetail,.traits,.cal,.arc{grid-template-columns:1fr}
+  .timer .lbl{display:none} .tb-btn .tx{display:none}
+  .cat{grid-template-columns:24px 1fr} .cat .seg{grid-column:1/-1}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+
+<header class="topbar">
+  <div class="brandmark">GAURAV JAIN <span>×</span> BRANDOLOGIST</div>
+  <div class="crumb" id="crumb"></div>
+  <button class="tb-btn" id="jumpStudio" type="button" title="Open the posts"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 9h8M8 13h8M8 17h5"/></svg><span class="tx">Posts</span></button>
+  <button class="tb-btn" id="fsBtn" type="button" title="Fullscreen (F)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg><span class="tx">Fullscreen</span></button>
+</header>
+<main class="stage" id="stage" aria-live="polite"></main>
+<footer class="foot">
+  <button class="navbtn" id="prev" type="button" aria-label="Previous screen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg></button>
+  <div class="progress" id="progress"></div>
+  <span class="count" id="count"></span>
+  <div class="timer" id="timer"></div>
+  <button class="navbtn" id="next" type="button" aria-label="Next screen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></button>
+</footer>
+<div class="overlay" id="overlay" hidden></div>
+
+<script>
+(function(){
+"use strict";
+const IMG=k=>"photos/"+k+".jpg";
+const AVATAR="avatar.jpg";
+
+const PILLARS={
+ K:{name:"Know Gaurav",pct:42,count:5,line:"His journey, values and defining moments.",aud:"All four audiences. CXOs and young founders first.",msg:"A founder who started from scratch, failed more than once, and kept learning.",ex:"Post 01: a Diwali visit to Nehru Place that started his journey.",imp:"He is real. I know where he comes from."},
+ I:{name:"Industry & Business Perspective",pct:25,count:3,line:"How he reads the market.",aud:"Investors, strategic partners and industry peers.",msg:"Clear, practical views on where IT, mobility and electronics are heading.",ex:"Post 03: why the IT market is not shrinking.",imp:"He sees the market clearly."},
+ L:{name:"Leadership Philosophy",pct:17,count:2,line:"How he runs people.",aud:"Priority 1: industry CXOs and senior talent.",msg:"Senior people at Geonix own real decisions, with the freedom to be wrong.",ex:"Post 04: the product manager sets the price, not him.",imp:"I would get real authority working with him."},
+ E:{name:"Real Business Experiences",pct:17,count:2,line:"Proof, through what actually happened.",aud:"All audiences, especially investors and peers.",msg:"Integrity and judgment shown in real incidents, not claims.",ex:"Post 06: the profitable deal he refused.",imp:"This brand won't cut corners."}
+};
+const PNAME={K:"Know Gaurav",I:"Industry",L:"Leadership",E:"Experience"};
+
+const POSTS=[
+{n:1,date:"Tue, 10 Nov",hook:"\"Kya karta hai?\"\n\"Kuch nahi karta. Business dhoond raha hoon.\"",slot:"W1 · Tue",week:1,p:"K",title:"How it began",photo:"5160",aud:"All audiences · CXOs and young founders first",
+ purpose:"Introduce the person before any business lesson: an ordinary start, a decision to come back, two failures, a chance he acted on.",
+ take:"Big journeys often start small. Anybody can grow if they keep learning.",
+ hooks:["\"Kya karta hai?\" / \"Kuch nahi karta. Business dhoond raha hoon.\"","My first visit to Nehru Place was to deliver a Diwali gift.","Before Geonix, I had already tried two businesses that did not work."],
+ src:"Your story from the 26 Oct conversation: Rohini, CA entrance, Canada, the return, early ventures, Nehru Place, 2012.",confirm:["The year 2012 and the \"humble, normal family\" wording","Mentioning your father's business slowing down"],
+ cap:`That was me in Nehru Place, Diwali 2012. My first time ever in Nehru Place. I had only gone with my cousin to give someone a Diwali gift.
+
+Let me go back a little.
+
+I come from a very humble, normal family in Rohini. After school I started CA and cleared the entrance. Then the family said, Canada chala ja, wahan achhi opportunities hongi. So I went to Humber College for a BBA.
+
+Family was supporting me, so I had a lot of free time. Most of it went in sitting with Indians who had been there 15, 25 years. I would ask everyone, "Kaisa lagta hai yahan?"
+
+Most of them said they wanted to go back to India. And when I asked what's stopping you, the answer was always the same:
+"Dil India jaana chahta hai, dimaag nahi jaane deta."
+
+That line sat in my head. I realised I would be stuck in the same circle 20 years later. I had a work permit. If I stayed, I would keep thinking about going back and never go.
+
+So I said, main aaj hi chalta hoon. And I came back.
+
+First business here, tiles and sanitaryware, in partnership. Failed. Then a small factory. Ran it four to six months. Failed. My father's jute bags business was also going down.
+
+So that day in Nehru Place, when the gentleman said, "Hum motherboard import karte hain, kaam karna hai toh le lo," I took one sample home.
+
+Market was closed for Diwali. On the third day I came back and walked the market for two days with that one motherboard. ₹1,000 ka mil raha hai, ₹1,100 mein bik jayega. Lag raha tha chal jayega.
+
+He got me the office next to his on rent. That's how my journey in this industry started.
+
+I don't have a big degree. I went to do a degree and came out with just a diploma. Whatever I know, I learned from the market, from books and business coaches, and from a lot of mistakes.
+
+That's what I want to share here. Not "dekho main kitna bada ban gaya." Just the decisions, the falls, and what I learned from them.
+
+Because I really believe anybody can grow. Just keep learning.`},
+{n:2,date:"Thu, 12 Nov",hook:"A year and a half of earning. Gone in one night. And my father asked me only one question.",slot:"W1 · Thu",week:1,p:"K",title:"\"Ye samajh tuition fees de di\"",photo:"5174",aud:"Young founders · CXOs · anyone who has failed",
+ purpose:"Share the defining early loss, and where your comfort with risk comes from.",
+ take:"A loss you can survive becomes the fee for what you learn.",
+ hooks:["Pehle saal mein hi ₹50–70 lakh bana liye the. Honestly, I thought, main raja hoon.","A year and a half of earning, gone in one night.","My father asked me only one question that night."],
+ src:"Your story from the 26 Oct conversation, and your father's words. The cause of the loss is not mentioned.",confirm:["The ₹50–70 lakh figure","Saying \"overnight, it went to zero\" without giving the reason"],
+ cap:`Pehle saal mein hi ₹50–70 lakh bana liye the. That was big money for me. Honestly, I thought, main raja hoon.
+
+Then something happened, and overnight, all of it went to zero.
+
+That night I went to my father. He asked, "Pareshan kyun hai?" I told him everything. A year and a half of earning, gone in one shot.
+
+He asked me only one thing: "Kaam karna aa gaya?"
+I said yes.
+"Toh phir kaam kar. Kya tension hai. Ye samajh tuition fees de di."
+
+Between 2011 and 2015 I fell many times. That night is the one I remember. It took away my fear of losing. Zero se neeche toh kuch nahi hai.
+
+Even today, before anything new, I first ask: what is the maximum I can lose? If I can live with it, I start.`},
+{n:3,date:"Sat, 14 Nov",hook:"Bahut log bolte hain IT market shrink ho raha hai. I see it the other way.",slot:"W1 · Sat",week:1,p:"I",title:"The IT market is not shrinking",photo:"5195",aud:"Investors · industry peers",
+ purpose:"Your first business-perspective post: a clear, contrarian view with a reason behind it.",
+ take:"Demand is changing shape, not shrinking.",
+ hooks:["Bahut log industry mein bolte hain ki market shrink ho raha hai. I see it the other way.","Only around 10% of Indian homes have a computer. How can this market shrink?"],
+ src:"Your view from the 26 Oct conversation. Our team will source-check the 10% / 90% figures before publishing.",confirm:[],
+ cap:`Variety bahut aa gayi hai, online badh raha hai, general trade khatam ho raha hai. Yahi sunne ko milta hai.
+
+By the data I follow, only around 10% of Indian homes have a computer. In the US it's around 90%. Many developing countries are at 20, 30, 40%. And India is the largest market in the world by population. How can this market shrink?
+
+Bas tareeka badal raha hai. Pehle ghar mein ek computer tha. Aaj office ke liye laptop chahiye, ghar ka alag, ek phone, ek tab.
+
+Needs badh rahi hain, toh market bhi badhega. We just have to keep up with it.`},
+{n:4,date:"Tue, 17 Nov",hook:"At Geonix, the product manager decides the selling price. Not me.",slot:"W2 · Tue",week:2,p:"L",title:"Room to decide",photo:"5307",aud:"Priority 1: CXOs and senior talent",
+ purpose:"Give senior talent a concrete picture of what ownership at Geonix means.",
+ take:"Ownership means pricing power, a budget you control, and time to recover from a bad call.",
+ hooks:["At Geonix, the product manager decides the selling price. Not me.","Someone on my team is down ₹50 lakh. Here is what we do."],
+ src:"How Geonix works, from the 26 Oct conversation: pricing, the kitty, loss thresholds, the EMI example.",confirm:["Sharing the kitty mechanism and the ₹50 lakh / EMI example publicly"],
+ cap:`Any product that comes in, the product manager knows everything. Net cost kya hai, service ki cost kya hai, company ko kitna margin chahiye. Uske baad kitne ka bechna hai, yeh unka decision hai.
+
+Extra mein becha, toh woh paisa ek kitty mein jaata hai. Kahan kharch karna hai, woh bhi wahi decide karte hain.
+
+Loss ho gaya? Koi baat nahi. Thresholds hain. Market upar-neeche hota hai.
+
+Say someone is down ₹50 lakh. Ek mahine mein cover karne ka pressure doge, toh galat decisions honge. So we break it into an EMI. Around ₹4 lakh every month, from the kitty. Baaki, you are still free to take decisions.
+
+A lot of senior people I interview tell me: paisa mil raha hai, but apne hisaab se lead karne ki freedom nahi hai.
+
+At Geonix we tell them: you own the department. Run it whatever way you want. Just get the results.`},
+{n:5,date:"Thu, 19 Nov",hook:"2016 mein meri shaadi hui. The same year was my toughest year in business.",slot:"W2 · Thu",week:2,p:"K",title:"2016",photo:"5276",aud:"Young founders · peers · investors",
+ purpose:"A defining moment, and the focus rule you still follow.",
+ take:"Focus beats spreading small bets everywhere.",
+ hooks:["2016 mein meri shaadi hui. The same year was my toughest year in business.","That year, I lost more than I earned."],
+ src:"Your 2016 experience from the 26 Oct conversation.",confirm:["Mentioning the marriage year","Exact figures, or simply \"I lost more than I earned\""],
+ cap:`In those days, if someone came and said "yeh kaam achha hai, kamai ho jayegi," I would put in some money. My logic was simple. Thoda-thoda paisa multiple jagah lagao, har jagah se kuch aata rahega.
+
+Kahin kuch panga ho gaya, kahin kuch. Three or four places at the same time. Stress badh gaya, and every one of them made a loss. That year, [CONFIRM: "I lost ₹3 crore against ₹1 crore income" or "I lost more than I earned"].
+
+After that I made one rule. Computer hardware, IT, mobility, electronics. Bas. Iske bahar dekhna bhi nahi hai, chahe kitna bhi bada opportunity dikhe.
+
+This industry is huge. If I stay in it, I can build something big. If I keep going idhar-udhar, na yeh bada banega, na woh.
+
+Wahan se focus aaya. I still follow that rule.`},
+{n:6,date:"Sat, 21 Nov",hook:"Imaandari ke ₹50 milne hain. Agar ₹250 aane lage, toh main khud hi bhatak jaunga.",slot:"W2 · Sat",week:2,p:"E",title:"The deal we said no to",photo:"",aud:"Investors · peers · CXOs",
+ purpose:"Show integrity as a commercial choice, without identifying anyone.",
+ take:"A brand is what customers find out about you over time.",
+ hooks:["Imaandari ke ₹50 milne hain. Agar ₹250 aane lage, toh main khud hi bhatak jaunga.","A ₹1,000 product, available at ₹800. \"Kisi ko pata nahi chalega.\""],
+ src:"The modified-chip offer from the 26 Oct conversation. Supplier and country are not named. Text-only, with no product image.",confirm:[],
+ cap:`That is what went through my mind when we got an offer for motherboards with a modified chip. The BIOS would show a higher spec. The real performance would not match. A ₹1,000 product, available at ₹800. "Kisi ko pata nahi chalega. Ek lakh piece le lo."
+
+We said no.
+
+Short term, paisa aa jaata. But I know what comes after. Brand building stops. Failure rate badhega, phir bahane dhoondte phirenge. Team ko bhi jhooth bolna padega.
+
+And these jugaad offers are not rare in our business. They come regularly.
+
+So we leave them, and keep building for the long term.`},
+{n:7,date:"Tue, 24 Nov",hook:"China mein 20, 30, 50 tier-2 brands easily mil jaayenge. India mein? Haath pe gin loge.",slot:"W3 · Tue",week:3,p:"I",title:"What China showed me about Indian brands",photo:"5228",aud:"Investors · peers",
+ purpose:"Explain why Geonix moved from trading to building a brand.",
+ take:"India has room for many more strong tier-2 brands.",
+ hooks:["2020 tak hum ek trading company the. Margin hai, le aao, bech lo.","China has 50 to 100 tier-2 brands. India has five to seven."],
+ src:"Your China observation and the trading-to-brand shift, from the 26 Oct conversation.",confirm:[],
+ cap:`2020 tak hum ek trading company the. Margin hai, le aao, bech lo. Margin nahi, band kar do.
+
+Phir laga, aise kab tak chalega?
+
+I used to travel to China a lot. Population almost hamare jitni. Tier-1 brands toh sabko pata hain. But tier 2 mein? 20, 30, 50, 100 brands easily mil jaayenge. Sab survive kar rahe hain, achha paisa bana rahe hain.
+
+Aur India mein? Paanch-saat tier-2 brands.
+
+That gap is where we decided to focus. It takes time.
+
+And I had to unlearn one thing. Coming from a traditional business family, I thought marketing equals sales. ₹50 lakh lagaye, toh ₹5 crore ki sale batao. It took me years to accept that visibility needs its own budget. Sales follow.`},
+{n:8,date:"Thu, 26 Nov",hook:"A few years back, I was not ready to pay ₹16,000 for a Tally licence.",slot:"W3 · Thu",week:3,p:"K",title:"I didn't want to pay ₹16,000 for Tally",photo:"5186",aud:"Founders · CXOs",
+ purpose:"Show the learner in you: an honest admission, then how your thinking changed.",
+ take:"Change your own thinking first. Then the organisation follows.",
+ hooks:["A few years back, I was not ready to pay ₹16,000 for a Tally licence.","Same person. Different thinking."],
+ src:"Your 2020 learning experience from the 26 Oct conversation.",confirm:["Naming the 2020 course and trainer, or not","Sharing the software spend figure"],
+ cap:`Kyun dena hai? Kaam toh chal hi raha hai.
+
+In 2020 I attended a three-day business course [CONFIRM: name the course and trainer, or not]. It changed my life completely. MIS kya hota hai. HR kyun chahiye. Process aur system kyun chahiye. Team se kaam kaise karwana hai.
+
+I came back and started with a ₹2,000 software subscription. Then I saw kaam badh raha hai. We brought in HR. Started building teams. Dheere-dheere, delegation.
+
+Nuksaan bhi khaya, dhoka bhi khaya. When we brought in senior people, we didn't know how to set the right expectations. We learned that too.
+
+Today we pay [CONFIRM: "₹30–40 lakh" or "many times that"] every year for software across our companies, and I'm happy paying it.
+
+Same person. Different thinking. Learning is a never-ending process.`},
+{n:9,date:"Sat, 28 Nov",hook:"Log mujhse poochte hain: aap itni authority dete ho, log seekh ke chale gaye toh?",slot:"W3 · Sat",week:3,p:"L",title:"Business is a game of probabilities",photo:"5330",aud:"CXOs · founders who struggle to delegate",
+ purpose:"Your core view on trusting people, in your own words.",
+ take:"Manage the ratio, not every person.",
+ hooks:["Log mujhse poochte hain: aap itni authority dete ho, log seekh ke chale gaye toh?","10 log aayenge. Do superstar banenge."],
+ src:"Your \"game of probabilities\" view and the employee-loan example, from the 26 Oct conversation.",confirm:["Mentioning employee loans"],
+ cap:`I believe business is a game of probabilities. Life bhi.
+
+10 log aayenge. Do superstar banenge, saath bhi rahenge, top-notch kaam bhi karenge. Ek aisa niklega jo literally dhoka dega, nuksaan karayega. Do-teen average. Kuch neutral, chhod ke chale jaayenge bina kuch galat kiye.
+
+Yeh ratio mere dimaag mein hai. Toh woh ek mujhe baaki nau pe trust karne se nahi rok sakta.
+
+Same with employee loans. HR aur CFO kehte hain, sir yeh sahi nahi. I tell them: 10 mein se ek nahi dega, company ko farak nahi padega. Jin nau ka kaam nikal jaayega, unke liye kitni badi baat hai.
+
+Long run mein, jo top ke do hain, woh itna fayda karate hain ki sab cover ho jaata hai.`},
+{n:10,date:"Tue, 1 Dec",hook:"Five months after buying from us, a dealer said our stock was faulty. Then he filed a complaint.",slot:"W4 · Tue",week:4,p:"E",title:"The dealer who filed a complaint",photo:"5351",aud:"Peers · dealers · CXOs",
+ purpose:"Credibility through a hard situation handled without burning the relationship.",
+ take:"Bigaadne se kuch nahi hone wala. Find a way for both sides to recover.",
+ hooks:["Five months after buying from us, a dealer said our stock was faulty. Then he filed a complaint.","\"Bhai, aapka challenge kya hai?\""],
+ src:"The RAM dealer situation from the 26 Oct conversation, anonymised as you suggested.",confirm:["Saying \"police complaint\" or just \"complaint\"","The discount amounts","How it ended, and the relationship today"],
+ cap:`RAM prices had shot up. He bought a big lot from us, expecting the market to go higher. Everyone was predicting that. The market went flat, then started falling. He held the stock for three or four months and was looking at a big loss.
+
+Then the calls started. Compatibility issue hai. Stock sahi nahi hai. Payment was done long ago. For five months there was no issue, and nobody else in the market had one.
+
+We called him to our office. "Bhai, aapka challenge kya hai?"
+
+He asked for a discount. We met him midway [CONFIRM: amounts]. And to help him recover the rest, we said: chalo, saath mein hard drive ka business shuru karte hain.
+
+Bigaadne se kuch nahi hone wala. Kuch hum lete hain, kuch aap lo. Naye business se aap bhi cover kar loge.
+
+[CONFIRM: how it ended, and where the relationship is today]`},
+{n:11,date:"Thu, 3 Dec",hook:"Aaj ke customer ko ₹50 mein bhi ₹100 ka maal chahiye.",slot:"W4 · Thu",week:4,p:"I",title:"\"₹50 mein ₹100 ka maal\"",photo:"5203",aud:"Peers · investors",
+ purpose:"How you read today's customer, and how you respond to the pressure.",
+ take:"Customer expectations will only rise. Adapting is the only way to survive.",
+ hooks:["Aaj ke customer ko ₹50 mein bhi ₹100 ka maal chahiye.","Isi ke saath jeena hai. Aakhri saans tak."],
+ src:"Your view on customer expectations from the 26 Oct conversation.",confirm:[],
+ cap:`Quality, packaging, delivery, price, service. Sab ek saath. 10–15 saal pehle log samajhte the, jitna kharcha utna maal. Aaj nahi.
+
+Zepto, Blinkit ke baad 10 minute mein delivery milti hai. So when the same customer's laptop has a problem, he doesn't even want to go to a service centre. Aur jaaye toh: mujhe abhi doosra chahiye. Dealer ko bhi fast delivery chahiye.
+
+Yeh sab margins pe aata hai. It's a real challenge for our whole industry.
+
+Jab bhi meri team aati hai ki sir, market yeh maang raha hai, I say one thing. Isi ke saath jeena hai. Aakhri saans tak.
+
+That's the only way to survive in this era.`},
+{n:12,date:"Sat, 5 Dec",hook:"People sometimes tell me we have built something big. Mujhe aaj bhi nahi lagta.",slot:"W4 · Sat",week:4,p:"K",title:"Why I'm here",photo:"5242",aud:"All audiences",
+ purpose:"Close the month with where you're headed, and an open door to conversations.",
+ take:"Gaurav is approachable, and wants to share what he has learned.",
+ hooks:["People sometimes tell me we have built something big. Mujhe aaj bhi nahi lagta.","Kuch bada build karna hai."],
+ src:"Your thoughts on growth, mentoring and approachability, from the 26 Oct conversation.",confirm:["Why LinkedIn, and why now, in one line in your own words"],
+ cap:`Maybe hunger zyada hai. Pehle toh yeh bhi nahi socha tha ki yahan tak pahunchenge.
+
+At this stage, paisa by-product hai. What drives me is simple: kuch bada build karna hai.
+
+[CONFIRM: why LinkedIn, why now, one line in your words]
+
+I don't want to pretend "dekho main kitna bada ban gaya." I want to share what worked, what didn't, and what I learned. Talking to people and helping them grow is something very close to my heart.
+
+And one more thing. People assume that at this scale you become unreachable. Not true. Schedule a time and I'm happy to meet. 15 minute, aadha ghanta, ek takeaway toh mil hi jaayega.
+
+Whether you're a supplier, a young founder, or someone building something in IT, mobility or electronics, let's talk.`}
+];
+
+const V2={
+1:{hook:`Diwali 2012. Nehru Place. Someone asked me, "Kya karta hai?"`,cap:`Mera jawab tha: "Kuch nahi. Business dhoond raha hoon."
+
+I was there by chance. My cousin had to deliver a Diwali gift, and I went along. It was the first time in my life I had stepped into Nehru Place.
+
+To understand why I had nothing to say, you have to go back a few years.
+
+I come from a very humble, normal family in Rohini. After school I started CA and cleared the entrance. Then the family decided Canada would offer better opportunities, and I went to Humber College for a BBA.
+
+Family was supporting me, so I had time. I spent most of it with Indians who had settled there 15, 25 years ago. In every conversation, I asked the same question: "Kaisa lagta hai yahan?"
+
+Almost everyone said they wanted to return. And almost everyone gave the same reason for not returning:
+
+"Dil India jaana chahta hai, dimaag nahi jaane deta."
+
+I could see myself in that sentence 20 years later. I had a work permit. I knew that if I stayed, I would keep thinking about going back and never go.
+
+So I came back.
+
+The next few years tested me. A tiles and sanitaryware partnership failed. A small factory ran for four to six months and shut down. My father's jute bag business was slowing down too.
+
+That is where I was when the gentleman in Nehru Place said, "Hum motherboard import karte hain. Kaam karna hai toh le lo."
+
+I took one sample home. The market was closed for Diwali. On the third day, I came back and spent two full days walking shop to shop with that one motherboard. Buying at ₹1,000, selling at ₹1,100. Lag raha tha chal jayega.
+
+It did. He rented me the office next to his, and in 2012, my journey in this industry began.
+
+I don't have a big degree. I went for one and came out with a diploma. Everything since has come from the market, from mentors and books, and from mistakes that cost real money.
+
+That is what I will write about here. Not success stories. The decisions behind building Geonix, the ones that worked and the ones that didn't.
+
+Because if there is one thing I believe completely, it is this: anybody can grow. Just keep learning.`},
+2:{hook:`A year and a half of earning. Gone in one night. And my father asked me only one question.`,cap:`It was my first real business. Motherboards, Nehru Place, 2012.
+
+In about a year and a half, I had made ₹50–70 lakh. At that point in my life, that was big money. I had never imagined making that in my first stint. Honestly, I thought, main raja hoon.
+
+Then something happened, and overnight, all of it went to zero.
+
+I won't go into what happened. What matters is what came after.
+
+That night I went to my father. He looked at me and asked, "Pareshan kyun hai?"
+
+I told him everything. A year and a half of work, gone in one shot.
+
+He didn't ask how. He didn't ask who. He asked only one thing:
+
+"Kaam karna aa gaya?"
+
+I said yes.
+
+"Toh phir kaam kar. Kya tension hai. Ye samajh tuition fees de di. Padhai ke liye bhi toh paise dete hi hain."
+
+So I started again.
+
+Between 2011 and 2015, I fell many times. Businesses failed. Money came and went. But that night changed something permanently. It took away my fear of losing.
+
+Zero se neeche toh kuch nahi hai. As long as you are not gambling, you can always start again.
+
+That is still how I take decisions. Before anything new, I don't first ask how much I can make. I ask what is the maximum I can lose. If I can live with that number, I start. And if it happens, I move on.
+
+I have seen many good businessmen get stuck for months after one big loss.
+
+My father made sure I never got stuck. That was the most valuable fee I ever paid.`},
+3:{hook:`"Market shrink ho raha hai." I hear this often in our industry. I see it the other way.`,cap:`The argument usually goes like this. Too much variety. Online is eating into general trade. The IT business has peaked.
+
+Now look at the numbers.
+
+By the data I follow, only around 10% of Indian homes have a computer. In the US, it is around 90%. Many developing countries sit between 20 and 40%.
+
+And India is the largest market in the world by population.
+
+A market with that much headroom does not shrink. It changes shape.
+
+Pehle ghar mein ek computer tha. Aaj office ke liye laptop chahiye, ghar ke liye alag, phir ek phone, phir ek tab. Every household needs more devices, not fewer.
+
+What is really changing is how people buy, and what they expect. That is a different challenge, and a solvable one.
+
+The businesses that struggle will not be the ones in a shrinking market. They will be the ones that stopped adapting and called it a shrinking market.`},
+4:{hook:`At Geonix, the product manager decides the selling price. Not me.`,cap:`Every product that comes in, the product manager sees the full picture. Net cost. Service cost. The margin the company needs.
+
+After that, the price is their call.
+
+If they sell above target, the extra goes into a kitty. They decide where to spend it.
+
+If the market turns and they take a loss, koi baat nahi. There are thresholds, and within them, a loss is part of the job. Markets go up and down.
+
+Say someone is down ₹50 lakh. If I ask them to recover it in a month, they will panic, and panic leads to bad decisions. So we break it into an EMI. They take a year, cover around ₹4 lakh a month from the kitty, and keep taking decisions the whole time.
+
+Why work this way?
+
+Because when I interview senior people, I hear the same thing again and again. "Paisa mil raha hai. But apne hisaab se lead karne ki freedom nahi hai." Many feel like one part of a very big machine.
+
+At our scale, many founders are still involved in every decision. If not micromanaging, then semi-managing.
+
+We chose the opposite. You own the department. Run it whatever way you want. Just get the results.
+
+When a company trusts people with its money, they start to feel like owners. That is the culture I want at Geonix.`},
+5:{hook:`2016 was the year I got married. It was also the hardest year of my business life.`,cap:`Back then, whenever someone came to me with an idea, "yeh kaam achha hai, kamai ho jayegi," I would put in some money.
+
+My thinking was simple. Thoda-thoda paisa multiple jagah lagao. Har jagah se kuch aata rahega.
+
+It didn't work that way.
+
+Kahin kuch panga ho gaya, kahin kuch. Three, four businesses at the same time, none of them my core. My attention was split. Stress badh gaya. And every single one of them made a loss.
+
+That year, [CONFIRM: "I lost ₹3 crore against ₹1 crore income" or "I lost more than I earned"].
+
+After that, I made one rule for myself.
+
+Computer hardware. IT. Mobility. Electronics. Bas.
+
+Iske bahar dekhna bhi nahi hai. No matter how attractive something looks from the outside.
+
+This industry is big enough to build something large. If I stay focused, I can build it. If I keep going idhar-udhar, na yeh bada banega, na woh.
+
+Wahan se focus aaya, and I have followed that rule ever since.
+
+Spreading money across many things feels like safety. For me, it turned out to be the most expensive year of my life.`},
+6:{hook:`Some of the most profitable offers we get are the ones we say no to.`,cap:`One of them was for motherboards with a modified chip. On the BIOS, the board would show a higher specification. In real use, the performance would not match.
+
+The pricing was attractive. A ₹1,000 product, available at ₹800. "Kisi ko pata nahi chalega. Ek lakh piece le lo."
+
+On paper, it was easy money. We said no.
+
+Not because someone might find out. Because I know what happens to me if I say yes.
+
+Imaandari ke ₹50 milne hain. Agar ₹250 aane lage, toh main khud hi bhatak jaunga.
+
+The first deal leads to the second. Failure rates go up. Then you start finding excuses for customers. Then you start lying to your own team. And the brand you are trying to build becomes just a presentation.
+
+These jugaad offers come to people in our business regularly. Saying no once is easy. The real work is building a company where everyone knows the answer before the offer arrives.
+
+Short-term profit is tempting. A brand customers trust is worth far more.`},
+7:{hook:`China mein 20, 30, 50 tier-2 brands easily mil jaayenge. India mein? Haath pe gin loge.`,cap:`Till 2020, Geonix was a trading company. Margin hai, le aao, bech lo. Margin nahi, band kar do. It worked, and it paid the bills.
+
+But one question kept coming back. Aise kab tak chalega?
+
+I travelled to China often. Their population is almost ours. Everyone knows their tier-1 brands. Go one level below, and you find dozens of tier-2 brands, each surviving and making good money.
+
+Their spending power is higher today. In 10–15 years, ours will catch up. Yet in India, you can count tier-2 brands on your fingers. Paanch, saat.
+
+That gap became our direction.
+
+It is not easy here. Dealers need 30–40 days of credit. Customers expect better service every year. Many brands that started 10–20 years before us stopped at that point and stayed there.
+
+We decided to do the work. Brand focus from 2020. Dealer meets from 2022–23. And this year, real investment in visibility.
+
+That needed one personal change. Coming from a traditional business family, I believed marketing equals sales. ₹50 lakh lagaye, toh ₹5 crore ki sale batao.
+
+It took me years to unlearn that. Visibility needs its own budget and its own patience. Sales follow.
+
+India doesn't need fewer brands. It needs more Indian brands willing to build for the long term.`},
+8:{hook:`A few years back, I wasn't ready to pay ₹16,000 for a Tally licence.`,cap:`Kyun dena hai? Kaam toh chal hi raha hai.
+
+That was my mindset. We were growing, making money, building the company. But most of it ran on effort, not on systems.
+
+In 2020, I attended a three-day business course [CONFIRM: name the course and trainer, or not]. Those three days changed how I looked at my own company.
+
+MIS kya hota hai. HR kyun chahiye. Process aur system kyun chahiye. Team se kaam kaise karwana hai.
+
+I came back and started small. A ₹2,000 software subscription. Then I saw the work actually moving. We brought in HR. Started building teams. Dheere-dheere, delegation.
+
+It wasn't smooth. Nuksaan bhi khaya, dhoka bhi khaya. When we brought in senior people, we didn't know how to set the right expectations. Some had to leave. We had to learn how to keep good juniors from quitting.
+
+Every mistake taught us something we needed.
+
+Today we pay [CONFIRM: "₹30–40 lakh" or "many times that"] every year for software across our companies. And I am happy paying it.
+
+Same person. Different thinking.
+
+That is why the first thing I tell anyone who joins my team is this: learning is a never-ending process. It applied to me first.`},
+9:{hook:`"Aap itni authority dete ho. Log seekh ke chale gaye toh?" I get asked this a lot.`,cap:`My answer is simple. Business is a game of probabilities. Life bhi.
+
+If I give real authority to 10 people, I know roughly how it plays out.
+
+Two will become superstars. They stay, and they do top-notch work.
+Two or three will be average.
+A few will be neutral. Some will leave without doing anything wrong.
+And one will let me down. Dhoka dega, nuksaan karayega. That person is coming. I know it.
+
+Many founders try to stop that one person by controlling all ten. They end up losing what the top two could have built.
+
+I would rather manage the ratio than micromanage the people.
+
+Same with employee loans. Our HR and CFO sometimes push back. "Sir, yeh sahi nahi." I tell them: 10 mein se ek nahi dega, company ko farak nahi padega. But for the other nine, it might solve something big in their lives.
+
+In the long run, what the top performers build covers everything else.
+
+Trust has a cost. Not trusting has a bigger one. It just doesn't show up on the balance sheet.`},
+10:{hook:`Five months after buying from us, a dealer said our stock was faulty. Then he filed a complaint against us.`,cap:`RAM prices had shot up. Everyone in the market expected them to go higher, and this dealer bought a big lot from us.
+
+The market didn't go up. It went flat, then started falling. He held the stock for three or four months, and the loss kept growing.
+
+Then the calls started. Compatibility issue hai. Stock sahi nahi hai. He was shouting at our salesman.
+
+Payment had been settled long ago. For five months, there was no complaint. Nobody else in the market had reported a single issue with that stock. And then came a [CONFIRM: police] complaint.
+
+The easy reaction would have been to fight it.
+
+We called him to our office instead. "Bhai, aapka challenge kya hai?"
+
+He said we had pushed extra stock on him and asked for a discount. We met him midway [CONFIRM: amounts].
+
+Then we went one step further. To help him recover the rest, we offered something new: chalo, saath mein hard drive ka business shuru karte hain.
+
+Bigaadne se kuch nahi hone wala. Kuch hum lete hain, kuch aap lo. Naye business se aap bhi cover kar loge.
+
+[CONFIRM: how it ended, and where the relationship is today]
+
+In our industry, many people assume every supplier and every customer is out to cheat them. Some will. But you don't win by fighting every battle. You win by finding a way for both sides to keep doing business tomorrow.`},
+11:{hook:`Aaj ke customer ko ₹50 mein bhi ₹100 ka maal chahiye.`,cap:`Quality. Packaging. Delivery. Price. Service. All at once.
+
+10–15 saal pehle the equation was simple. Jitna kharcha, utna maal. That equation is gone.
+
+Zepto and Blinkit deliver in 10 minutes. So when the same customer's laptop has a problem, he doesn't even want to visit a service centre. Aur agar jaana pade, toh: mujhe abhi doosra chahiye.
+
+Dealers want faster delivery too.
+
+All of this lands on margins. For our whole industry, it is a real challenge.
+
+Whenever my team comes to me with "Sir, market ab yeh maang raha hai," I give one answer.
+
+Isi ke saath jeena hai.
+
+Not as a complaint. As the job. Customer expectations will not go back to where they were, and brands waiting for that will be left behind.
+
+Aakhri saans tak, this is the work. It is the only way to survive in this era.`},
+12:{hook:`People sometimes tell me we have built something big. Mujhe aaj bhi nahi lagta.`,cap:`Maybe hunger zyada hai. When I started, I hadn't even imagined reaching where we are today. Now that we are here, it still feels like the beginning.
+
+At this stage, money is a by-product. I don't live a lavish life, and I have never felt the need to show anything on social media. What drives me is simpler: kuch bada build karna hai.
+
+[CONFIRM: why LinkedIn, why now, one line in your words]
+
+I don't want to use this space to say "dekho main kitna bada ban gaya." I want to share what worked, what didn't, and what it cost to learn.
+
+Talking to people and helping them grow is something very close to my heart. My team, my family, founders in our industry, big or small.
+
+People also assume that at this scale, you become unreachable. That is not true. Not anytime on the phone, but schedule a time and I am happy to meet. 15 minute, aadha ghanta. Ek takeaway toh mil hi jaayega.
+
+If you are a supplier, a young founder, a senior leader, or someone building something in IT, mobility or electronics, let's talk.
+
+That's why I'm here.`}
+};
+
+const TRAITS=[
+ {k:"01",t:"Trusts capable people and delegates real ownership",q:"“You own the department. Run it whatever way you want. Just get the results.”",s:["Product managers at Geonix know the net cost, service cost and target margin, then set the selling price themselves. Extra margin goes into a kitty they control.","About 20% of your time goes into mentoring the team. You gave the team AI tools while other companies were restricting them: “If I'm trusting you, there's no point stopping you.”"],src:"Discovery call · culture & ownership"},
+ {k:"02",t:"Evaluates the maximum downside before taking a risk",q:"“My style is not how much we'll make. I always do a reverse calculation: what is the maximum I can lose.”",s:["Before any new line, you write the investment, the maximum loss and a time limit. If the number is hit, it is wrapped up, because it was decided on Day 1.","Buying ₹2 crore of stock on a market view, you ask whether you can live with it becoming ₹1.5 crore, not whether it becomes ₹2.5 crore."],src:"Discovery call · risk-taking"},
+ {k:"03",t:"Believes business is a game of probabilities",q:"“10 people come to me: two become superstars, one will literally let me down. In the long run, I always win.”",s:["You empower people knowing a few will fail you, because the top performers more than cover the cost.","When HR and the CFO objected to easy employee loans, your answer: if one in ten doesn't repay, the company won't feel it; for the other nine it matters a lot."],src:"Discovery call · core philosophy"},
+ {k:"04",t:"Moved from a trading mindset to building a lasting brand",q:"“Till 2020 it was a trading company. Margin hai, le aao, bech lo. Then we asked: how long can this go on?”",s:["Travelling to China, you saw dozens of tier-2 brands thriving in a market India's size, while India had a handful. That gap became Geonix's direction.","It took years to accept that marketing is not equal to sales. Today Geonix invests in visibility: metro hoardings, bus advertising and a dedicated marketing leader."],src:"Discovery call · founder journey"},
+ {k:"05",t:"Believes in continuous learning, systems and mentoring others",q:"“Learning is a never-ending process. Always come with a solution, never with the problem.”",s:["A three-day business course in 2020 changed how you ran the company: MIS, HR, processes, systems.","When a fellow market player feared building a team, you had your own HR hire an HR person for him, then mentored both."],src:"Discovery call · learning & mentorship"}
+];
+const AUD=[
+ {p:1,t:"Industry CXOs & Senior Talent",s:"Primary audience",care:"Authority to decide, freedom to fail, and pride in building something they can point to.",chal:"Well paid but feeling like 'a part of the machine'. Founders who still semi-manage every decision.",learn:"How Geonix hands over P&L and decisions, moves fast on ideas, and keeps its promises.",conn:"To see whether a growing Indian brand would give them real ownership, even if they aren't moving today."},
+ {p:2,t:"Investor & Strategic Capital Ecosystem",s:"Long-term visibility",care:"Discipline, professional systems, focus, and a leadership team that can scale.",chal:"Telling ambitious mid-size Indian brands apart from those that plateau.",learn:"Downside-first decisions, focus on one industry, investment in systems and people.",conn:"Strategic partners who bring talent and experience follow founders whose thinking they already know."},
+ {p:3,t:"Industry Peers & Founders",s:"Networking",care:"Who is growing, how they run their teams, and where the industry is heading.",chal:"Stagnating at a fixed scale. Distrust of suppliers and customers. Fear that trained people will leave.",learn:"That Geonix is ambitious and growing, and how it handles trust, focus and adaptation.",conn:"Exchange of notes, collaboration, and relationships that pay off in ways nobody can predict."},
+ {p:4,t:"Entrepreneurs & Innovators",s:"Mentorship & collaboration",care:"Real stories, practical advice, mentors, and partners who back technology.",chal:"Ideas without execution. R&D capability without capital to launch.",learn:"Start executing. Write down expectations with partners on Day 1. Stay focused.",conn:"Mentorship and collaboration with an approachable founder in IT, mobility and electronics."}
+];
+const PROFILE={banner:"Building brands through people, systems and better decisions.",banner2:"Founder | Geonix • IT • Mobility • Surveillance",
+ heads:[{l:"Option 1 · Recommended",v:"Founder at Geonix | Building teams, systems and brands across IT, mobility & electronics"},{l:"Option 2",v:"Founder, Geonix | Building for the long term in India’s electronics ecosystem"},{l:"Option 3",v:"Founder at Geonix | Leadership, brand building and business decisions learned through experience"},{l:"Option 4",v:"Building Geonix | Learning to scale through people, systems and better decisions"},{l:"Option 5",v:"Founder, Geonix | IT, Mobility & Surveillance | People, Systems & Long-Term Thinking"}],
+ about:`I have spent much of my entrepreneurial life learning things the practical way. Some early ventures did not work. Some decisions cost me money. A few experiences changed the way I look at risk, people and business altogether.
+
+Today, I am building Geonix in IT, mobility and electronics. I care about building a company that can keep improving—through capable people, better systems and a brand that customers genuinely recognise.
+
+One belief guides many of my decisions: if you want senior people to build something meaningful, you have to let them make decisions. That includes the possibility that an experiment may fail. Accountability matters, but so does freedom.
+
+I also prefer asking what can go wrong before celebrating what might go right. Over time, that has helped me become more comfortable making decisions without becoming casual about risk.
+
+I am still learning. I enjoy conversations with people who build teams, improve products, challenge conventional thinking or are trying to create something useful in India. If there is a good reason for us to exchange ideas, I am always open to a thoughtful conversation.`};
+const CATS=[
+ {id:"positioning",t:"Founder-first positioning",s:"Know him → relate → trust his experience → recognise his authority"},
+ {id:"profile",t:"LinkedIn profile",s:"Headline, About section, banner, profile photo"},
+ {id:"voice",t:"Your voice in the content",s:"Your own lines kept, about 80% English and 20% Hinglish"},
+ {id:"calendar",t:"Month 1: 12 posts",s:"5 about you · 3 industry · 2 leadership · 2 real experiences"},
+ {id:"photos",t:"Photos and publication permissions",s:"One photo per post from the 29 Oct shoot; visitor consent for posts 04, 09, 10"}
+];
+const STEPS=["Confirm the highlighted points in the posts (most are yes/no)","Choose the LinkedIn headline and approve the About section","Get consent from the two colleagues shown in posts 04, 09 and 10","Share the 5–10 priority relationships to build in Month 1","Publish approved posts, three a week (Tue, Thu, Sat)","Weekly 30-minute review call (Tuesday, second half) for the first 2–3 weeks"];
+const SEGMENTS=[{name:"Understanding you",end:5},{name:"Audience & positioning",end:10},{name:"Month 1 plan",end:15},{name:"Post review",end:27},{name:"Approvals",end:30}];
+const SLIDE_SEG=[0,0,0,1,1,1,2,2,2,2,3,4];
+const STATUS=[["approved","Approve"],["revision","Needs Revision"],["hold","Hold"],["pending","Pending"]];
+const STATUS_LABEL={approved:"Approved",revision:"Needs Revision",hold:"Hold",pending:"Pending Approval"};
+
+const KEY="geonix-m1-client-v2";
+let state={posts:{},cats:{},steps:{},headline:0,notes:""};
+try{const r=localStorage.getItem(KEY);if(r)state=Object.assign(state,JSON.parse(r));}catch(e){}
+POSTS.forEach(p=>{if(!state.posts[p.n])state.posts[p.n]={status:"pending",comment:""};if(!state.posts[p.n].version)state.posts[p.n].version="v2";});
+const VER=p=>state.posts[p.n].version==="v1"?{hook:p.hook,cap:p.cap,v:"v1"}:{hook:V2[p.n].hook,cap:V2[p.n].cap,v:"v2"};
+const words=t=>t.replace(/\[CONFIRM:[^\]]*\]/g,"").split(/\s+/).filter(Boolean).length;
+CATS.forEach(c=>{if(!state.cats[c.id])state.cats[c.id]="pending";});
+function save(){try{localStorage.setItem(KEY,JSON.stringify(state));}catch(e){}}
+let cur=0,curPost=1,curTrait=0,curAud=0,curPillar="K",aboutOpen=false;
+let timerStart=null,timerRunning=false,timerAcc=0;
+
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const paras=t=>t.split(/\n\n+/).map(p=>"<p>"+esc(p).replace(/\[CONFIRM:\s*([^\]]+)\]/g,'<span class="conf">To confirm: $1</span>').replace(/\n/g,"<br>")+"</p>").join("");
+const plain=t=>t.replace(/\[CONFIRM:\s*([^\]]+)\]/g,"[to confirm: $1]");
+const ico={x:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>',arrow:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',dl:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>'};
+function toast(m){const t=document.createElement("div");t.className="toast";t.textContent=m;document.body.appendChild(t);setTimeout(()=>t.remove(),2200);}
+function countStatus(){const c={approved:0,revision:0,hold:0,pending:0};POSTS.forEach(p=>c[state.posts[p.n].status]++);return c;}
+const nn=n=>String(n).padStart(2,"0");
+
+const SLIDES=[
+ {tone:"dark",name:"Welcome",r:()=>`<div class="wrap"><div class="hero"><div>
+   <div class="eyebrow">Month 1 · Founder Authority on LinkedIn</div>
+   <h1 class="h-xl" style="margin-top:18px">GAURAV<br>JAIN</h1>
+   <div class="sub">The Thinking Behind Geonix</div>
+   <div class="meta"><span>Prepared by The Brandologist Co.</span><span>Strategy and content for your approval</span></div>
+   <div style="margin-top:34px;display:flex;gap:12px;flex-wrap:wrap"><button class="btn btn-gold" data-act="begin" type="button">Begin ${ico.arrow}</button><button class="btn btn-ghost" data-act="studio" type="button" style="color:var(--grey)">Go to the posts</button></div>
+  </div><div><div class="portrait"><img src="${IMG("5223")}" alt="Gaurav Jain at the Geonix office"></div></div></div></div>`},
+ {tone:"dark",name:"What we understood",r:()=>`<div class="wrap">
+   <div class="eyebrow">What we understood</div>
+   <h2 class="h-l">We are not building another LinkedIn influencer.</h2>
+   <p class="lede" style="color:var(--paper)">We are making the thinking behind Geonix visible to the people who matter.</p>
+   <div class="trio">
+    <div><span class="n">i</span><h3>Respect among senior industry leaders</h3><p class="muted" style="font-size:14.5px">So the right CXOs and senior talent see Geonix as a place where they would own real decisions.</p></div>
+    <div><span class="n">ii</span><h3>Recognition of your business judgment</h3><p class="muted" style="font-size:14.5px">So investors and peers see the discipline behind the growth, not just the company name.</p></div>
+    <div><span class="n">iii</span><h3>Meaningful professional relationships</h3><p class="muted" style="font-size:14.5px">The right connections and conversations count for more than follower numbers.</p></div>
+   </div>
+   <div class="summary"><div class="eyebrow" style="color:var(--grey)">From our 26 Oct conversation</div><ul>
+    <li>LinkedIn is not a sales channel. No dealer or stock enquiries.</li><li>Talent first, then investors, peers and young entrepreneurs.</li>
+    <li>Pan-India. Geonix is the primary identity for now.</li><li>Your natural voice: about 80% English, 20% Hinglish.</li>
+    <li>Mentor is the role closest to your heart.</li><li>Success means the right connections, and your own circle noticing.</li></ul></div>
+  </div>`},
+ {tone:"light",name:"The Gaurav Jain we discovered",r:()=>{const t=TRAITS[curTrait];return `<div class="wrap">
+   <div class="eyebrow">The Gaurav Jain we discovered</div>
+   <h2 class="h-l">Five patterns, each backed by something you actually did.</h2>
+   <div class="traits" role="tablist">${TRAITS.map((x,i)=>`<button class="trait${i===curTrait?" on":""}" data-trait="${i}" role="tab" aria-selected="${i===curTrait}" type="button"><span class="k">${x.k}</span><h3>${esc(x.t)}</h3><span class="more">${i===curTrait?"Showing the evidence":"See the evidence"}</span></button>`).join("")}</div>
+   <div class="evidence"><div class="quote">${esc(t.q)}</div><div class="story">${t.s.map(x=>"<p>"+esc(x)+"</p>").join("")}<span class="src">${esc(t.src)}</span></div></div>
+  </div>`;}},
+ {tone:"dark",name:"Who should know you",r:()=>{const a=AUD[curAud];return `<div class="wrap">
+   <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap"><div><div class="eyebrow">Who should know Gaurav Jain</div><h2 class="h-l" style="margin-top:12px">Four audiences, in priority order.</h2></div>
+   <div class="chips"><span class="chip">Pan-India</span><span class="chip">Primary identity: Geonix</span><span class="chip">IT · Mobility · Surveillance</span></div></div>
+   <div class="aud"><div class="aud-list" role="tablist">${AUD.map((x,i)=>`<button class="aud-btn${i===curAud?" on":""}" data-aud="${i}" role="tab" aria-selected="${i===curAud}" type="button"><span class="p">${x.p}</span><span><span class="t">${esc(x.t)}</span><br><span class="s">${esc(x.s)}</span></span></button>`).join("")}</div>
+   <div class="aud-panel"><h3>${esc(a.t)}</h3><div class="q"><span>What they care about</span><p>${esc(a.care)}</p></div><div class="q"><span>Their challenges</span><p>${esc(a.chal)}</p></div><div class="q"><span>What they should learn from you</span><p>${esc(a.learn)}</p></div><div class="q"><span>Why they may connect</span><p>${esc(a.conn)}</p></div></div></div>
+  </div>`;}},
+ {tone:"light",name:"The reputation we want to build",r:()=>`<div class="wrap">
+   <div class="eyebrow">Positioning</div><h2 class="h-l">The reputation we want to build.</h2>
+   <div class="rep">
+    <div><div class="big">KNOW<br><em>HIM</em></div><p>An authentic entrepreneur shaped by real experience.</p><small>A scratch start, failures, and a decision to come back from Canada.</small></div>
+    <div><div class="big">RELATE<br><em>TO HIM</em></div><p>Someone who has been where they are.</p><small>Losses, a tough 2016, and a father who said “tuition fees samajh”.</small></div>
+    <div><div class="big">TRUST HIS<br><em>EXPERIENCE</em></div><p>A commercially disciplined business builder.</p><small>Downside first, focus, honesty when it costs money.</small></div>
+    <div><div class="big">RECOGNISE HIS<br><em>AUTHORITY</em></div><p>A leader who gives ownership and shares what he learns.</p><small>P&amp;L ownership, open doors, mentoring by instinct.</small></div>
+   </div>
+   <p class="pull">One person, seen the same way in every post, so that anyone who meets you finds <em>the same Gaurav they read.</em></p>
+  </div>`},
+ {tone:"light",name:"LinkedIn profile",r:()=>{const h=PROFILE.heads[state.headline]||PROFILE.heads[0];const st=state.cats.profile;return `<div class="wrap">
+   <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap"><div><div class="eyebrow">Your LinkedIn profile</div><h2 class="h-l" style="margin-top:12px">A profile that reads like you.</h2></div><span class="stamp"><span class="dot st-${st}"></span>${STATUS_LABEL[st]}</span></div>
+   <div class="li-grid"><div class="li">
+     <div class="li-banner"><div class="bt">${esc(PROFILE.banner)}<br><span>${esc(PROFILE.banner2)}</span></div></div>
+     <div class="li-body"><div class="li-av"><img src="${AVATAR}" alt="Gaurav Jain"></div><div class="li-name">Gaurav Jain</div><div class="li-head">${esc(h.v)}</div><div class="li-loc">New Delhi, India · Founder, Geonix</div></div>
+     <div class="li-sec"><h4>About</h4><div class="li-about${aboutOpen?"":" clamp"}">${esc(PROFILE.about)}</div></div>
+     <div class="li-sec"><h4>Featured</h4><div style="font-size:13.5px;color:#555">Post 01 (how it began) and Post 04 (room to decide), once approved and live.</div></div>
+   </div>
+   <div style="display:flex;flex-direction:column;gap:14px;min-width:0"><div class="side-card">
+     <h4>Profile photo</h4><ul><li>From the 29 Oct shoot (7S1A5233): direct, calm, plain background</li></ul>
+     <h4>Banner</h4><ul><li>“Building brands through people, systems and better decisions.”</li><li>No staged team photos</li></ul>
+     <h4>To confirm with you</h4><ul><li>Your exact designation and the year Geonix was founded</li><li>Which headline sounds most like you</li></ul></div>
+     <div class="ctrl-row"><button class="btn btn-sm btn-outline" data-act="about" type="button">${aboutOpen?"Collapse About":"View full About section"}</button><button class="btn btn-sm btn-outline" data-act="heads" type="button">Compare 5 headlines</button><button class="btn btn-sm btn-ink" data-act="approveProfile" type="button">${st==="approved"?"Direction approved ✓":"Approve direction"}</button></div>
+   </div></div></div>`;}},
+ {tone:"dark",name:"Month 1 content mix",r:()=>{const p=PILLARS[curPillar];return `<div class="wrap">
+   <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap"><div><div class="eyebrow">Month 1 content mix</div><h2 class="h-l" style="margin-top:12px">Month 1 is about you first.</h2></div>
+   <p class="muted" style="max-width:44ch;font-size:14.5px">5 of the 12 posts are about you as a person. The other 7 still come from your own experience. Every week mixes the four.</p></div>
+   <div class="pillars" role="tablist">${Object.entries(PILLARS).map(([k,x])=>`<button class="pillar${k===curPillar?" on":""}" data-pillar="${k}" role="tab" aria-selected="${k===curPillar}" type="button"><span class="pc">${x.pct}%</span><h3>${esc(x.name)}</h3><p>${esc(x.line)}</p><span class="cnt">${x.count} of 12 posts</span></button>`).join("")}</div>
+   <div class="pdetail"><div class="q"><span>Who it's for</span><p>${esc(p.aud)}</p></div><div class="q"><span>Core message</span><p>${esc(p.msg)}</p></div><div class="q"><span>Example</span><p>${esc(p.ex)}</p></div><div class="q"><span>What readers should feel</span><p class="serif" style="font-size:18px;font-style:italic">“${esc(p.imp)}”</p></div></div>
+  </div>`;}},
+ {tone:"light",name:"How Month 1 builds",r:()=>`<div class="wrap">
+   <div class="eyebrow">How Month 1 builds</div><h2 class="h-l">First people get to know you. Then they trust you.</h2>
+   <div class="arc">
+    <div class="st"><span class="n">STEP 1</span><h3>Know you</h3><p>Where you started and what shaped you. Post 01 is your story, not a lesson.</p><span class="posts">Posts 01, 02</span></div>
+    <div class="st"><span class="n">STEP 2</span><h3>Relate to you</h3><p>Real setbacks and honest admissions people recognise from their own lives.</p><span class="posts">Posts 05, 08, 12</span></div>
+    <div class="st"><span class="n">STEP 3</span><h3>Trust your experience</h3><p>Real incidents that show your judgment and integrity.</p><span class="posts">Posts 06, 10</span></div>
+    <div class="st"><span class="n">STEP 4</span><h3>Recognise your authority</h3><p>Your views on the market and on leading people.</p><span class="posts">Posts 03, 04, 07, 09, 11</span></div>
+   </div>
+   <p class="pull">We are building your authority. <em>Not making you another LinkedIn content creator.</em></p>
+  </div>`},
+ {tone:"dark",name:"The 12 posts",r:()=>`<div class="wrap" style="gap:20px">
+   <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap"><div><div class="eyebrow">The first 30 days</div><h2 class="h-l" style="margin-top:12px">Twelve posts, three a week.</h2></div>
+   <div class="legend"><span><span class="dot st-approved"></span>Approved</span><span><span class="dot st-revision"></span>Needs revision</span><span><span class="dot st-hold"></span>Hold</span><span><span class="dot st-pending"></span>Pending</span></div></div>
+   <div class="cal">${[1,2,3,4].map(w=>`<div class="week"><div class="week-h"><b>Week ${w}</b><span>Tue · Thu · Sat</span></div>${POSTS.filter(p=>p.week===w).map(p=>`<button class="pcard" data-open="${p.n}" type="button">${p.photo?`<img src="${IMG(p.photo)}" alt="" loading="lazy">`:`<span class="np">Text<br>only</span>`}<span class="bd"><span class="top"><span class="num">${nn(p.n)}</span><span style="display:flex;align-items:center;gap:6px"><span class="ptag ${p.p}">${PNAME[p.p]}</span><span class="dot st-${state.posts[p.n].status}"></span></span></span><h4>${esc(p.title)}</h4><span class="tk">${esc(p.date)}</span></span></button>`).join("")}</div>`).join("")}</div>
+   <p class="muted" style="font-size:13px">Proposed dates. Each post goes live only after your approval. Click any post to read it in full.</p>
+  </div>`},
+ {tone:"light",name:"Your voice",r:()=>`<div class="wrap">
+   <div class="eyebrow">Your voice, not ours</div><h2 class="h-l">Same story. Two very different posts.</h2>
+   <div class="cmp">
+    <div class="gen"><span class="lbl">Typical LinkedIn content</span><p class="txt">Failure is the best teacher! Every setback is a setup for a comeback. Embrace the journey and never give up. 💪 #Resilience #FounderLife #Mindset</p><p class="note">Could be anyone. No moment, no person, no real words. Nobody remembers it.</p></div>
+    <div class="real"><span class="lbl">Your post (Post 02)</span><p class="txt">He asked me only one thing: “Kaam karna aa gaya?” I said yes. “Toh phir kaam kar. Kya tension hai. Ye samajh tuition fees de di.”</p><p class="note">Your father's actual words, from our conversation. Only you could have written this.</p></div>
+   </div>
+   <div><div class="eyebrow" style="margin-bottom:10px">Your lines we keep as you said them</div><div class="lines"><span>Dil India jaana chahta hai, dimaag nahi jaane deta</span><span>Business is a game of probabilities</span><span>Isi ke saath jeena hai</span><span>Imaandari ke ₹50…</span><span>Kuch bada build karna hai</span><span>Learning is a never-ending process</span></div></div>
+   <p class="muted" style="font-size:14.5px">Every post comes in two versions. Version 1 stays closest to how you said it. Version 2 is polished, with fuller stories and a leader's tone, still in your words. You choose. We only fix the order and readability. About 80% English, 20% Hinglish, the way you speak. No hashtag strings, no emoji, no self-praise.</p>
+  </div>`},
+ {tone:"light",name:"Post review",studio:true,r:()=>studioHTML()},
+ {tone:"dark",name:"Approvals & next steps",r:()=>{const c=countStatus();return `<div class="wrap">
+   <div class="eyebrow">Approvals &amp; next steps</div><h2 class="h-l">Let's align on the first 30 days.</h2>
+   <div class="appr"><div>
+    ${CATS.map((x,i)=>`<div class="cat"><span class="n">${i+1}</span><div><h4>${esc(x.t)}</h4><small>${esc(x.s)}${x.id==="calendar"?` · Posts: ${c.approved} approved, ${c.revision} revision, ${c.hold} hold, ${c.pending} pending`:""}</small></div><div class="seg" role="group">${STATUS.map(([k])=>`<button class="${state.cats[x.id]===k?"on "+k:""}" data-cat="${x.id}" data-st="${k}" type="button" aria-pressed="${state.cats[x.id]===k}">${k==="approved"?"Approved":k==="revision"?"Revision":k==="hold"?"Hold":"Pending"}</button>`).join("")}</div></div>`).join("")}
+    <div style="margin-top:18px"><label for="notes" class="eyebrow" style="color:var(--grey)">Meeting notes</label><textarea id="notes" style="margin-top:8px;background:var(--blue);color:var(--paper);border-color:rgba(170,182,195,.3)" placeholder="Decisions, answers to the highlighted points, names for priority relationships…">${esc(state.notes||"")}</textarea></div>
+   </div><div style="display:flex;flex-direction:column;gap:18px">
+    <div><div class="eyebrow" style="margin-bottom:6px">Next steps</div><div class="steps">${STEPS.map((s,i)=>`<label class="step${state.steps[i]?" done":""}"><input type="checkbox" data-step="${i}" ${state.steps[i]?"checked":""}><span>${esc(s)}</span></label>`).join("")}</div></div>
+    <button class="btn btn-gold" data-act="exportFinal" type="button" style="align-self:flex-start">${ico.dl} Export meeting summary</button>
+   </div></div>
+   <hr class="rule">
+   <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap"><p class="closing">The experience is real.<br>The thinking is distinctive.<br><em>Now let's make it visible to the right people.</em></p><span class="muted" style="font-family:var(--f-head);font-weight:700;letter-spacing:.08em;font-size:13px">GAURAV JAIN × THE BRANDOLOGIST CO.</span></div>
+  </div>`;}}
+];
+
+function studioHTML(){
+ const p=POSTS.find(x=>x.n===curPost),s=state.posts[p.n],c=countStatus(),V=VER(p),w1=words(p.hook+" "+p.cap),w2=words(V2[p.n].hook+" "+V2[p.n].cap);
+ return `<div class="studio-wrap">
+  <div class="studio-head"><div><div class="eyebrow">Post review</div><h2>Post ${nn(p.n)} · ${esc(p.title)}</h2></div>
+   <div class="tally"><span><span class="dot st-approved"></span>${c.approved} approved</span><span><span class="dot st-revision"></span>${c.revision} revision</span><span><span class="dot st-hold"></span>${c.hold} hold</span><span><span class="dot st-pending"></span>${c.pending} pending</span></div></div>
+  <div class="studio">
+   <nav class="s-col s-list" aria-label="Posts">${POSTS.map(x=>`<button class="s-item${x.n===curPost?" on":""}" data-post="${x.n}" type="button">${x.photo?`<img src="${IMG(x.photo)}" alt="" loading="lazy">`:`<span class="np">Text</span>`}<span class="t">${nn(x.n)} · ${esc(x.title)}<span class="w">${x.date} · ${PNAME[x.p]}</span></span><span class="dot st-${state.posts[x.n].status}"></span></button>`).join("")}</nav>
+   <section class="s-col s-main"><div class="brief"><div class="brief-grid"><div><span>Goes live</span><b>${p.date}</b></div><div><span>Account</span><b>Gaurav Jain · Founder, Geonix</b></div><div><span>Pillar</span><b><span class="ptag ${p.p}" style="letter-spacing:.06em">${esc(PILLARS[p.p].name)}</span></b></div><div><span>Who it's for</span><b>${esc(p.aud)}</b></div></div>
+    <div class="brief-row"><div class="idea"><span>The idea behind this post</span><p>${esc(p.purpose)}</p></div><div class="idea"><span>What it stands for</span><p>${esc(p.take)}</p></div></div>
+    <div><button class="btn btn-sm btn-outline" data-act="copyBrief" type="button">Copy post brief to share</button></div></div><div class="vtabs" role="group" aria-label="Choose version"><button class="vtab${V.v==="v1"?" on":""}" data-ver="v1" type="button" aria-pressed="${V.v==="v1"}"><b>Version 1</b><small>Closest to your words · ~${w1} words</small></button><button class="vtab${V.v==="v2"?" on":""}" data-ver="v2" type="button" aria-pressed="${V.v==="v2"}"><b>Version 2 <span class="rec">· Recommended</span></b><small>Polished, fuller story · ~${w2} words</small></button></div><article class="post">
+    <div class="post-h"><img src="${AVATAR}" alt="Gaurav Jain"><div><div class="nm">Gaurav Jain</div><div class="hl">Founder at Geonix · ${p.date}</div></div><span class="pend-flag">${STATUS_LABEL[s.status]}</span></div>
+    <div class="hookline"><span class="hl-tag">Hook · first line in the feed</span><br>${esc(V.hook).replace(/\n/g,"<br>")}</div><div class="post-body clamp" id="postBody">${paras(V.cap)}</div>
+    <div class="post-x"><button type="button" data-act="expand">…see more</button><button type="button" data-act="read">Reading mode</button></div>
+    ${p.photo?`<img class="post-img" src="${IMG(p.photo)}" alt="Photo for post ${nn(p.n)}">`:`<div class="post-noimg">Text-only post. No photo, so nothing points at a product or supplier.</div>`}
+   </article></section>
+   <aside class="s-col s-meta">
+    <div class="m-sec"><span class="k">Hook (Version ${V.v==="v1"?"1":"2"})</span><p style="font-weight:600">${esc(V.hook).replace(/\n/g,"<br>")}</p></div>
+    <div class="m-sec"><span class="k">Other hook options</span><ol>${[p.hook,V2[p.n].hook,...p.hooks].filter((h,i,a)=>{const k=x=>x.replace(/[^a-z]/gi,"").toLowerCase();return k(h)!==k(V.hook)&&a.findIndex(y=>k(y)===k(h))===i;}).map(h=>"<li>"+esc(h)+"</li>").join("")}</ol></div>
+    <div class="m-sec"><span class="k">Where it comes from</span><p>${esc(p.src)}</p></div>
+    ${p.confirm.length?`<div class="m-sec confirm-box"><span class="k">Please confirm</span><ul>${p.confirm.map(x=>"<li>"+esc(x)+"</li>").join("")}</ul></div>`:""}
+    <hr style="border:0;border-top:1px solid rgba(11,26,46,.1);margin:0">
+    <div class="m-sec"><span class="k">Your decision</span><div class="st-row" role="group">${STATUS.map(([k,l])=>`<button class="st-btn ${k}${s.status===k?" on":""}" data-pst="${k}" type="button" aria-pressed="${s.status===k}"><span class="dot st-${k}"></span>${l}</button>`).join("")}</div></div>
+    <div class="m-sec"><label for="pcomment"><span class="k">Comments</span></label><textarea id="pcomment" placeholder="Changes, answers to the points above, words you'd never use…">${esc(s.comment)}</textarea><div class="saved" id="savedNote"></div></div>
+    <div class="s-nav"><button class="btn btn-sm btn-outline" data-act="prevPost" type="button" ${p.n===1?"disabled":""}>← Previous</button><button class="btn btn-sm btn-outline" data-act="nextPost" type="button" ${p.n===12?"disabled":""}>Next →</button></div>
+    <div class="s-nav"><button class="btn btn-sm btn-outline" data-act="calendar" type="button">Back to the 12 posts</button><button class="btn btn-sm btn-ink" data-act="exportPosts" type="button">${ico.dl} Export summary</button></div>
+   </aside></div></div>`;
+}
+
+const stage=$("#stage");
+function render(anim){
+ const S=SLIDES[cur];
+ stage.innerHTML=`<section class="slide ${S.tone}${anim?" enter":""}" aria-label="${esc(S.name)}">${S.r()}</section>`;
+ $("#crumb").textContent=(cur+1)+". "+S.name;
+ $("#count").textContent=(cur+1)+" / "+SLIDES.length;
+ $("#progress").innerHTML=SLIDES.map((s,i)=>`<button class="${i<cur?"done":""}${i===cur?" on":""}" data-go="${i}" type="button" aria-label="Go to ${esc(s.name)}" title="${i+1}. ${esc(s.name)}"></button>`).join("");
+ $("#prev").disabled=cur===0;$("#next").disabled=cur===SLIDES.length-1;
+ const ta=$("#pcomment");if(ta)ta.addEventListener("input",()=>{state.posts[curPost].comment=ta.value;save();$("#savedNote").textContent="Saved on this device";});
+ const mn=$("#notes");if(mn)mn.addEventListener("input",()=>{state.notes=mn.value;save();});
+ updateTimer();
+}
+function go(i,anim=true){if(i<0||i>=SLIDES.length)return;cur=i;if(timerStart===null&&!timerRunning&&timerAcc===0&&i>0)startTimer();render(anim);stage.querySelector(".slide").scrollTop=0;}
+function rerender(){const sc=stage.querySelector(".slide");const top=sc?sc.scrollTop:0;render(false);const n=stage.querySelector(".slide");if(n)n.scrollTop=top;}
+function startTimer(){timerStart=Date.now();timerRunning=true;}
+function elapsed(){return timerAcc+(timerRunning?Date.now()-timerStart:0);}
+function fmt(ms){const s=Math.floor(ms/1000);return String(Math.floor(s/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0");}
+function updateTimer(){const seg=SEGMENTS[SLIDE_SEG[cur]],el=elapsed(),t=$("#timer");
+ if(timerStart===null&&timerAcc===0){t.className="timer";t.innerHTML=`<span class="lbl">${esc(seg.name)} · by ${seg.end}:00</span><button type="button" data-act="timer">Start timer</button>`;return;}
+ t.className="timer"+(el/60000>seg.end?" late":"");t.innerHTML=`<span class="lbl">${esc(seg.name)} · by ${seg.end}:00</span><b>${fmt(el)}</b><button type="button" data-act="timer">${timerRunning?"Pause":"Resume"}</button>`;}
+setInterval(()=>{if(timerRunning)updateTimer();},1000);
+
+const ov=$("#overlay");
+function openOverlay(h){ov.innerHTML=h;ov.hidden=false;const f=ov.querySelector("button,textarea");if(f)f.focus();}
+function closeOverlay(){ov.hidden=true;ov.innerHTML="";}
+function openReader(){const p=POSTS.find(x=>x.n===curPost);
+ openOverlay(`<div class="reader" role="dialog" aria-modal="true" aria-label="Reading mode"><div class="rh"><div><div class="eyebrow" style="color:var(--gold-d)">Post ${nn(p.n)} · ${esc(PILLARS[p.p].name)} · Version ${VER(p).v==="v1"?"1":"2"}</div><h3 style="margin-top:8px">${esc(p.title)}</h3></div><button class="closex" data-act="close" type="button" aria-label="Close">${ico.x}</button></div>
+ <div class="rbody"><p style="font-weight:600">${esc(VER(p).hook).replace(/\n/g,"<br>")}</p>${paras(VER(p).cap)}</div>${p.photo?`<img src="${IMG(p.photo)}" alt="Photo for post ${nn(p.n)}">`:""}
+ <div class="ctrl-row" style="justify-content:space-between"><button class="btn btn-sm btn-outline" data-act="readPrev" type="button" ${p.n===1?"disabled":""}>← Previous post</button><button class="btn btn-sm btn-outline" data-act="readNext" type="button" ${p.n===12?"disabled":""}>Next post →</button></div></div>`);}
+function openHeads(){openOverlay(`<div class="modal" role="dialog" aria-modal="true" aria-label="Compare headlines"><div style="display:flex;justify-content:space-between;gap:12px"><div><div class="eyebrow" style="color:var(--gold-d)">Headline options</div><h3 style="margin-top:8px">Which one sounds most like you?</h3></div><button class="closex" data-act="close" type="button" aria-label="Close">${ico.x}</button></div>
+ <div class="alt-list">${PROFILE.heads.map((h,i)=>`<button class="alt${state.headline===i?" on":""}" data-head="${i}" type="button"><span class="l">${esc(h.l)}${state.headline===i?" · shown on profile":""}</span><span class="v">${esc(h.v)}</span></button>`).join("")}</div></div>`);}
+function summaryText(final){const d=new Date().toLocaleString("en-IN",{dateStyle:"medium",timeStyle:"short"}),c=countStatus();
+ let t=`GAURAV JAIN × THE BRANDOLOGIST CO.\nMonth 1 ${final?"Meeting Summary":"Post Approvals"}\nExported: ${d}\n\n`;
+ if(final){t+="APPROVALS\n";CATS.forEach((x,i)=>{t+=`${i+1}. ${x.t}: ${STATUS_LABEL[state.cats[x.id]]}\n`;});t+=`\nLinkedIn headline chosen:\n${PROFILE.heads[state.headline].v}\n\n`;}
+ t+=`POSTS: ${c.approved} approved · ${c.revision} needs revision · ${c.hold} hold · ${c.pending} pending\n\n`;
+ POSTS.forEach(p=>{const s=state.posts[p.n];t+=`Post ${nn(p.n)} (${p.date}, ${PILLARS[p.p].name}): ${p.title}\n  Version chosen: ${VER(p).v==="v1"?"1":"2"}\n  Hook: ${VER(p).hook.replace(/\n/g," ")}\n  Photo: ${p.photo?"7S1A"+p.photo:"text only"}\n  Status: ${STATUS_LABEL[s.status]}\n  Comments: ${s.comment.trim()||"—"}\n${p.confirm.length?"  To confirm: "+p.confirm.join("; ")+"\n":""}\n`;});
+ if(final){t+="NEXT STEPS\n";STEPS.forEach((s,i)=>{t+=`[${state.steps[i]?"x":" "}] ${s}\n`;});t+=`\nMEETING NOTES\n${(state.notes||"").trim()||"—"}\n`;}
+ return t;}
+function briefText(p){return `GAURAV JAIN · LinkedIn · Post ${nn(p.n)} of 12\nGoes live: ${p.date} (proposed)\nAccount: Gaurav Jain, Founder, Geonix\nPillar: ${PILLARS[p.p].name}\nWho it's for: ${p.aud}\n\nThe idea behind this post:\n${p.purpose}\n\nWhat it stands for:\n${p.take}\n\nVersion: ${VER(p).v==="v1"?"1 (closest to your words)":"2 (polished)"}\n\nHook (first line):\n${VER(p).hook}\n\nFull post:\n${VER(p).hook}\n\n${plain(VER(p).cap)}\n\nPhoto: ${p.photo?"7S1A"+p.photo+" (29 Oct shoot)":"Text only"}${p.confirm.length?"\n\nPlease confirm:\n- "+p.confirm.join("\n- "):""}`;}
+function copyText(txt,label){const fb=()=>{openOverlay(`<div class="modal" role="dialog" aria-modal="true" aria-label="${esc(label)}"><div style="display:flex;justify-content:space-between;gap:12px"><h3>${esc(label)}</h3><button class="closex" data-act="close" type="button" aria-label="Close">${ico.x}</button></div><label for="sumText" class="sr">Text</label><textarea id="sumText" readonly>${esc(txt)}</textarea><div class="ctrl-row"><button class="btn btn-sm btn-ink" data-act="copy" type="button">Copy</button></div></div>`);};
+ try{navigator.clipboard.writeText(txt).then(()=>toast(label+" copied"),fb);}catch(e){fb();}}
+async function exportSummary(final){const txt=summaryText(final),name=final?"Gaurav-Jain-Month1-Meeting-Summary.txt":"Gaurav-Jain-Month1-Post-Approvals.txt";
+ let saved=false;
+ try{const dl=window.claude?await window.claude.use("downloads"):null;if(dl){await dl.save({filename:name,data:txt});saved=true;toast("Summary saved");}}catch(e){}
+ if(saved)return;
+ openOverlay(`<div class="modal" role="dialog" aria-modal="true" aria-label="Summary"><div style="display:flex;justify-content:space-between;gap:12px;align-items:flex-start"><div><div class="eyebrow" style="color:var(--gold-d)">${final?"Meeting summary":"Post approvals"}</div><h3 style="margin-top:8px">${esc(name)}</h3><p class="muted" style="font-size:13.5px;margin-top:6px">Copy the text below and paste it into WhatsApp or email.</p></div><button class="closex" data-act="close" type="button" aria-label="Close">${ico.x}</button></div>
+ <label for="sumText" class="sr">Summary text</label><textarea id="sumText" readonly>${esc(txt)}</textarea><div class="ctrl-row"><button class="btn btn-sm btn-ink" data-act="copy" type="button">Copy summary</button><button class="btn btn-sm btn-outline" data-act="close" type="button">Close</button></div></div>`);}
+
+document.addEventListener("click",e=>{
+ const b=e.target.closest("button");if(!b)return;const d=b.dataset;
+ if(d.go!==undefined)return go(+d.go);
+ if(d.trait!==undefined){curTrait=+d.trait;return rerender();}
+ if(d.aud!==undefined){curAud=+d.aud;return rerender();}
+ if(d.pillar){curPillar=d.pillar;return rerender();}
+ if(d.open){curPost=+d.open;return go(10);}
+ if(d.post){curPost=+d.post;return rerender();}
+ if(d.ver){state.posts[curPost].version=d.ver;save();rerender();return toast("Post "+nn(curPost)+": Version "+(d.ver==="v1"?"1":"2")+" selected");}
+ if(d.pst){state.posts[curPost].status=d.pst;save();rerender();return toast("Post "+nn(curPost)+": "+STATUS_LABEL[d.pst]);}
+ if(d.cat){state.cats[d.cat]=d.st;save();return rerender();}
+ if(d.head!==undefined){state.headline=+d.head;save();closeOverlay();rerender();return toast("Headline updated on the profile");}
+ switch(d.act){
+  case "begin":return go(1);
+  case "studio":return go(10);
+  case "about":aboutOpen=!aboutOpen;return rerender();
+  case "heads":return openHeads();
+  case "approveProfile":state.cats.profile=state.cats.profile==="approved"?"pending":"approved";save();rerender();return toast(state.cats.profile==="approved"?"Profile direction approved":"Profile set back to pending");
+  case "expand":{const pb=$("#postBody");pb.classList.toggle("clamp");b.textContent=pb.classList.contains("clamp")?"…see more":"Show less";return;}
+  case "read":return openReader();
+  case "readPrev":curPost=Math.max(1,curPost-1);rerender();return openReader();
+  case "readNext":curPost=Math.min(12,curPost+1);rerender();return openReader();
+  case "prevPost":curPost=Math.max(1,curPost-1);return rerender();
+  case "nextPost":curPost=Math.min(12,curPost+1);return rerender();
+  case "calendar":return go(8);
+  case "copyBrief":return copyText(briefText(POSTS.find(x=>x.n===curPost)),"Post brief");
+  case "exportPosts":return exportSummary(false);
+  case "exportFinal":return exportSummary(true);
+  case "close":return closeOverlay();
+  case "copy":{const ta=$("#sumText");const fb=()=>{ta.focus();ta.select();toast("Text selected. Press Ctrl/Cmd + C");};try{navigator.clipboard.writeText(ta.value).then(()=>toast("Summary copied"),fb);}catch(err){fb();}return;}
+  case "timer":if(timerStart===null&&timerAcc===0)startTimer();else if(timerRunning){timerAcc+=Date.now()-timerStart;timerRunning=false;}else{timerStart=Date.now();timerRunning=true;}return updateTimer();
+ }
+});
+document.addEventListener("change",e=>{if(e.target.dataset.step!==undefined){state.steps[e.target.dataset.step]=e.target.checked;save();rerender();}});
+$("#prev").addEventListener("click",()=>go(cur-1));
+$("#next").addEventListener("click",()=>go(cur+1));
+$("#jumpStudio").addEventListener("click",()=>go(10));
+$("#fsBtn").addEventListener("click",toggleFS);
+function toggleFS(){try{if(document.fullscreenElement)document.exitFullscreen();else{const r=document.documentElement.requestFullscreen&&document.documentElement.requestFullscreen();if(r&&r.catch)r.catch(()=>toast("Fullscreen isn't available in this view"));}}catch(e){toast("Fullscreen isn't available in this view");}}
+document.addEventListener("keydown",e=>{
+ if(!ov.hidden){if(e.key==="Escape")closeOverlay();return;}
+ const tag=(e.target.tagName||"").toLowerCase();if(tag==="textarea"||tag==="input")return;
+ if(["ArrowRight","PageDown"].includes(e.key)||(e.key===" "&&tag!=="button")){e.preventDefault();go(cur+1);}
+ else if(["ArrowLeft","PageUp"].includes(e.key)){e.preventDefault();go(cur-1);}
+ else if(e.key==="Home")go(0);else if(e.key==="End")go(SLIDES.length-1);
+ else if(e.key==="f"||e.key==="F")toggleFS();
+ else if(cur===10&&(e.key==="ArrowDown"||e.key==="j")){e.preventDefault();curPost=Math.min(12,curPost+1);rerender();}
+ else if(cur===10&&(e.key==="ArrowUp"||e.key==="k")){e.preventDefault();curPost=Math.max(1,curPost-1);rerender();}
+});
+ov.addEventListener("click",e=>{if(e.target===ov)closeOverlay();});
+render(false);
+})();
+</script>
+
+</body></html>
